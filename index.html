@@ -355,6 +355,42 @@ footer{padding:34px 0;color:#8f949e}.footer{display:flex;justify-content:space-b
 @media(max-width:1100px){.v15-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v15-featured,.v15-featured:hover{transform:none}}
 @media(max-width:650px){.v15-grid{grid-template-columns:1fr}.v15-card{padding:25px 21px}.v15-desc{min-height:0}.v15-featured{order:-1;margin-top:10px}.v15-trial{flex-direction:column;align-items:stretch}.v15-trial>a{justify-content:center}}
 
+
+/* V17 Profesyonel Özellikler */
+.features-v17{position:relative;overflow:hidden}
+.features-v17:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 15% 45%,rgba(111,38,180,.08),transparent 30%),
+radial-gradient(circle at 85% 40%,rgba(111,38,180,.08),transparent 30%);pointer-events:none}
+.v17-feature-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;position:relative}
+.v17-feature-card{padding:23px 17px;border-radius:18px;background:linear-gradient(180deg,rgba(17,19,26,.98),rgba(8,9,14,.98));border:1px solid rgba(240,185,55,.24);box-shadow:0 16px 38px rgba(0,0,0,.28);transition:.24s ease}
+.v17-feature-card:hover{transform:translateY(-5px);border-color:rgba(240,185,55,.58);box-shadow:0 22px 48px rgba(0,0,0,.38),0 0 20px rgba(131,64,220,.12)}
+.v17-icon{width:54px;height:54px;margin:0 auto 14px;display:grid;place-items:center;border-radius:50%;font-size:27px;background:radial-gradient(circle,rgba(240,185,55,.13),rgba(117,46,190,.10));border:1px solid rgba(240,185,55,.22);box-shadow:0 0 18px rgba(109,47,180,.14)}
+.v17-feature-card h3{text-align:center;margin:0 0 7px;font-size:15px;color:#f5f6f7}
+.v17-feature-card>p{text-align:center;min-height:32px;margin:0 0 14px;color:#9ca1ac;font-size:10px;line-height:1.45}
+.v17-feature-card ul{list-style:none;padding:12px 0 0;margin:0;border-top:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:9px}
+.v17-feature-card li{position:relative;padding-left:17px;color:#c9ccd2;font-size:9px;line-height:1.35}
+.v17-feature-card li:before{content:"✓";position:absolute;left:0;color:#a766f0;font-weight:900}
+.v17-benefit-strip{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(139,65,220,.36);border-radius:18px;background:linear-gradient(90deg,rgba(23,13,38,.72),rgba(10,11,16,.88));overflow:hidden}
+.v17-benefit-strip>div{padding:18px 20px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:11px;align-items:center;border-right:1px solid rgba(255,255,255,.07)}
+.v17-benefit-strip>div:last-child{border-right:0}.v17-benefit-strip span{grid-row:1/3;font-size:24px}.v17-benefit-strip strong{font-size:10px;color:#f2f2f4}.v17-benefit-strip small{font-size:9px;color:#989da7;margin-top:3px}
+.v17-panel-card{margin-top:22px;padding:20px;display:grid;grid-template-columns:1.05fr 1.4fr auto;gap:24px;align-items:center;border-radius:20px;border:1px solid rgba(240,185,55,.62);background:
+radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-gradient(180deg,rgba(15,16,22,.97),rgba(8,9,13,.99));box-shadow:0 20px 50px rgba(0,0,0,.32)}
+.v17-panel-preview{padding:16px;border-radius:14px;background:linear-gradient(180deg,#0d1017,#090b11);border:1px solid rgba(255,255,255,.07)}
+.v17-panel-logo{font-size:10px;color:#efbb38;font-weight:950;margin-bottom:13px}
+.v17-panel-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.v17-panel-stats span{padding:10px;border-radius:9px;background:#11151e;border:1px solid rgba(255,255,255,.05);display:flex;flex-direction:column;gap:4px}
+.v17-panel-stats b{font-size:13px;color:#fff}.v17-panel-stats small{font-size:7px;color:#777e88}
+.v17-panel-actions{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:9px}.v17-panel-actions span{padding:9px;border-radius:8px;background:#15121f;color:#bca0e8;font-size:7px;text-align:center;border:1px solid rgba(132,66,210,.2)}
+.v17-panel-copy>small{font-size:8px;color:#a66bea;font-weight:900;letter-spacing:1.2px}.v17-panel-copy h3{margin:7px 0 9px;color:#eeba38;font-size:22px}.v17-panel-copy p{margin:0;color:#a9adb5;font-size:10px;line-height:1.55}
+.v17-panel-points{display:grid;grid-template-columns:repeat(3,1fr);gap:9px 16px;margin-top:15px}.v17-panel-points span{font-size:9px;color:#d4d5da}.v17-panel-points span::first-letter{color:#f1bd39}
+.v17-panel-btn{min-width:150px;min-height:48px;padding:0 18px;display:flex;align-items:center;justify-content:center;border-radius:13px;text-decoration:none;background:linear-gradient(90deg,#d99e18,#f1c55a);color:#0b0b0b;font-size:10px;font-weight:950;box-shadow:0 10px 26px rgba(240,185,55,.16);transition:.22s}
+.v17-panel-btn:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(240,185,55,.24)}
+.v17-bottom-strip{margin-top:18px;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(138,62,216,.32);border-radius:15px;background:#0a0c12}
+.v17-bottom-strip span{padding:14px 12px;text-align:center;color:#c8cbd1;font-size:9px;font-weight:800;border-right:1px solid rgba(255,255,255,.06)}
+.v17-bottom-strip span:last-child{border-right:0}
+@media(max-width:1100px){.v17-feature-grid{grid-template-columns:repeat(3,1fr)}.v17-panel-card{grid-template-columns:1fr 1fr}.v17-panel-btn{grid-column:1/-1}.v17-panel-points{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.v17-feature-grid{grid-template-columns:repeat(2,1fr)}.v17-benefit-strip{grid-template-columns:repeat(2,1fr)}.v17-panel-card{grid-template-columns:1fr}.v17-panel-points{grid-template-columns:1fr 1fr}.v17-bottom-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.v17-feature-grid,.v17-benefit-strip,.v17-bottom-strip{grid-template-columns:1fr}.v17-panel-points{grid-template-columns:1fr}}
+
 </style>
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
@@ -644,16 +680,105 @@ footer{padding:34px 0;color:#8f949e}.footer{display:flex;justify-content:space-b
   </div>
 </section>
 
-<section id="features" class="section features"><div class="container"><div class="section-title"><small>HER ŞEY TEK YERDE</small><h2>ÖZELLİKLER</h2><p>Günlük kullanımda ihtiyaç duyacağınız temel içerik kategorileri ve cihaz seçenekleri.</p></div>
-<div class="feature-grid">
-<div class="card feature"><div class="ico">📺</div><h3>Canlı TV</h3><p>Geniş kanal seçenekleri</p></div>
-<div class="card feature"><div class="ico">⚽</div><h3>Futbol</h3><p>Futbol içeriklerine kolay erişim</p></div>
-<div class="card feature"><div class="ico">🎬</div><h3>Film</h3><p>Geniş film arşivi</p></div>
-<div class="card feature"><div class="ico">🎞️</div><h3>Dizi</h3><p>Popüler dizi içerikleri</p></div>
-<div class="card feature"><div class="ico">🏆</div><h3>Spor</h3><p>Farklı spor içerikleri</p></div>
-<div class="card feature"><div class="ico">📱</div><h3>Tüm Cihazlar</h3><p>TV • Telefon • Tablet • Bilgisayar</p></div>
-</div><div class="strip">HD • FHD • 4K Kalite &nbsp; | &nbsp; Hızlı Kurulum &nbsp; | &nbsp; Kolay Kullanım &nbsp; | &nbsp; WhatsApp Destek</div>
-</div></section>
+
+<section id="features" class="section features-v17">
+  <div class="container">
+    <div class="section-title">
+      <small>HER ŞEY TEK YERDE</small>
+      <h2>ÖZELLİKLERİMİZ</h2>
+      <p>Günlük kullanımda ihtiyaç duyacağınız temel içerik kategorileri, cihaz seçenekleri ve destek hizmetleri.</p>
+    </div>
+
+    <div class="v17-feature-grid">
+      <article class="v17-feature-card">
+        <div class="v17-icon">📺</div>
+        <h3>CANLI TV</h3>
+        <p>Geniş kanal seçenekleri</p>
+        <ul><li>Ulusal & yerel kanallar</li><li>Haber, belgesel ve çocuk içerikleri</li><li>Kolay erişim</li></ul>
+      </article>
+
+      <article class="v17-feature-card">
+        <div class="v17-icon">⚽</div>
+        <h3>SPOR</h3>
+        <p>Futbol ve farklı spor içerikleri</p>
+        <ul><li>Süper Lig ve Avrupa</li><li>Şampiyonlar Ligi</li><li>Canlı maç içerikleri</li></ul>
+      </article>
+
+      <article class="v17-feature-card">
+        <div class="v17-icon">🎬</div>
+        <h3>FİLM & DİZİ</h3>
+        <p>Geniş içerik arşivi</p>
+        <ul><li>Yeni filmler</li><li>Popüler diziler</li><li>Dublaj & altyazı seçenekleri</li></ul>
+      </article>
+
+      <article class="v17-feature-card">
+        <div class="v17-icon">📱</div>
+        <h3>TÜM CİHAZLAR</h3>
+        <p>İstediğiniz cihazda kullanım</p>
+        <ul><li>Smart TV</li><li>Telefon & tablet</li><li>Bilgisayar & TV Box</li></ul>
+      </article>
+
+      <article class="v17-feature-card">
+        <div class="v17-icon">🛡️</div>
+        <h3>YÜKSEK KALİTE</h3>
+        <p>HD • FHD • 4K seçenekleri</p>
+        <ul><li>HD / FHD / 4K</li><li>Akıcı görüntü deneyimi</li><li>Yüksek kalite seçenekleri</li></ul>
+      </article>
+
+      <article class="v17-feature-card">
+        <div class="v17-icon">🎧</div>
+        <h3>7/24 DESTEK</h3>
+        <p>Yardım her zaman yanınızda</p>
+        <ul><li>WhatsApp desteği</li><li>Kurulum yardımı</li><li>Hızlı iletişim</li></ul>
+      </article>
+    </div>
+
+    <div class="v17-benefit-strip">
+      <div><span>⚡</span><strong>HIZLI KURULUM</strong><small>Kısa sürede kullanıma başla</small></div>
+      <div><span>🚀</span><strong>ANINDA AKTİVASYON</strong><small>İşlem sonrası hızlı başlangıç</small></div>
+      <div><span>🔒</span><strong>GÜVENLİ & STABİL</strong><small>Güçlü kullanım deneyimi</small></div>
+      <div><span>🔄</span><strong>DÜZENLİ GÜNCELLEME</strong><small>İçerikler düzenli yenilenir</small></div>
+    </div>
+
+    <div class="v17-panel-card">
+      <div class="v17-panel-preview">
+        <div class="v17-panel-logo">PRİME TV</div>
+        <div class="v17-panel-stats">
+          <span><b>12 AYLIK</b><small>Aktif Paket</small></span>
+          <span><b>365</b><small>Kalan Gün</small></span>
+          <span><b>1/1</b><small>Aktif Cihaz</small></span>
+        </div>
+        <div class="v17-panel-actions">
+          <span>Playlist İşlemleri</span><span>Cihaz Yönetimi</span><span>Favoriler</span><span>Destek</span>
+        </div>
+      </div>
+
+      <div class="v17-panel-copy">
+        <small>KONTROL SİZDE</small>
+        <h3>KULLANICI KONTROL PANELİ</h3>
+        <p>Paket bilgilerinizi, cihazlarınızı ve kullanım detaylarınızı tek noktadan kolayca yönetin.</p>
+        <div class="v17-panel-points">
+          <span>✓ Aktif paket bilgileri</span>
+          <span>✓ Playlist işlemleri</span>
+          <span>✓ Kalan gün takibi</span>
+          <span>✓ Cihaz yönetimi</span>
+          <span>✓ Favoriler</span>
+          <span>✓ Destek erişimi</span>
+        </div>
+      </div>
+
+      <a class="v17-panel-btn" href="https://musteripaneli.xyz/index.php?page=login" target="_blank" rel="noopener noreferrer">PANELİ KEŞFET →</a>
+    </div>
+
+    <div class="v17-bottom-strip">
+      <span>4K • HD • FHD KALİTE</span>
+      <span>KESİNTİSİZ DENEYİM</span>
+      <span>TÜM CİHAZLARLA UYUMLU</span>
+      <span>7/24 DESTEK</span>
+    </div>
+  </div>
+</section>
+
 
 
 
