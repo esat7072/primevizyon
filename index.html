@@ -332,6 +332,29 @@ footer{padding:34px 0;color:#8f949e}.footer{display:flex;justify-content:space-b
 .dock-whatsapp .dock-icon svg{fill:currentColor;width:22px;height:22px}
 .dock-whatsapp:hover{background:linear-gradient(110deg,rgba(37,211,102,.18),rgba(8,9,13,.94) 58%)}
 
+
+/* V15 Premium Paketler */
+.packages-v15{position:relative;overflow:hidden}
+.v15-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:34px;align-items:stretch}
+.v15-card{position:relative;display:flex;flex-direction:column;padding:28px 22px 22px;border-radius:22px;background:linear-gradient(180deg,rgba(24,23,30,.97),rgba(8,9,14,.99));border:1px solid rgba(238,183,47,.25);box-shadow:0 18px 45px rgba(0,0,0,.32);transition:.25s ease}
+.v15-card:hover{transform:translateY(-6px);border-color:rgba(238,183,47,.6);box-shadow:0 24px 55px rgba(0,0,0,.45),0 0 25px rgba(238,183,47,.08)}
+.v15-kicker{font-size:9px;font-weight:900;letter-spacing:1.4px;color:#e8b536}
+.v15-card h3{margin:14px 0 7px;font-size:25px;color:#fff}.v15-desc{min-height:48px;margin:0;color:#959aa5;font-size:11px;line-height:1.55}
+.v15-price{margin-top:20px;color:#efbb38;font-size:46px;line-height:1;font-weight:950;letter-spacing:-2px}.v15-price span{font-size:21px;vertical-align:top;letter-spacing:0}
+.v15-period{margin-top:7px;color:#777e89;font-size:9px}.v15-rule{height:1px;margin:20px 0;background:linear-gradient(90deg,rgba(238,183,47,.42),rgba(255,255,255,.03))}
+.v15-includes{font-size:9px;letter-spacing:1.2px;color:#c8cbd1}.v15-card ul{list-style:none;padding:0;margin:15px 0 22px;display:flex;flex-direction:column;gap:12px}
+.v15-card li{font-size:10px;line-height:1.4;color:#d5d7dc}.v15-card li::first-letter{color:#efbb38}
+.v15-card>a{margin-top:auto;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:13px;border:1px solid rgba(238,183,47,.5);text-decoration:none;color:#efc55d;font-size:10px;font-weight:950;transition:.2s ease}
+.v15-card>a:hover{background:#eeb72f;color:#08090c}
+.v15-featured{border:2px solid rgba(244,190,56,.92);background:linear-gradient(180deg,rgba(45,33,14,.98),rgba(15,11,21,.99) 38%,rgba(8,9,14,.99));box-shadow:0 24px 65px rgba(0,0,0,.48),0 0 34px rgba(238,183,47,.14);transform:translateY(-9px)}
+.v15-featured:hover{transform:translateY(-14px)}.v15-featured>a{background:linear-gradient(90deg,#d89d18,#f2c95f);color:#090909}
+.v15-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);padding:8px 18px;border-radius:999px;background:linear-gradient(90deg,#d99d17,#f4cb61,#d99d17);color:#090909;font-size:9px;font-weight:950;letter-spacing:.7px;white-space:nowrap;box-shadow:0 8px 22px rgba(240,185,55,.23)}
+.v15-trial{max-width:820px;margin:30px auto 0;padding:17px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid rgba(141,76,255,.3);border-radius:18px;background:linear-gradient(90deg,rgba(141,76,255,.1),rgba(238,183,47,.05))}
+.v15-trial div{display:flex;flex-direction:column;gap:4px}.v15-trial small{font-size:8px;color:#a57ae9;font-weight:900;letter-spacing:1.2px}.v15-trial strong{font-size:13px;color:#f2f2f4}
+.v15-trial>a{min-height:48px;display:flex;align-items:center;padding:0 18px;border-radius:12px;text-decoration:none;color:#fff;border:1px solid rgba(141,76,255,.55);background:rgba(91,39,160,.28);font-size:10px;font-weight:900}
+@media(max-width:1100px){.v15-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.v15-featured,.v15-featured:hover{transform:none}}
+@media(max-width:650px){.v15-grid{grid-template-columns:1fr}.v15-card{padding:25px 21px}.v15-desc{min-height:0}.v15-featured{order:-1;margin-top:10px}.v15-trial{flex-direction:column;align-items:stretch}.v15-trial>a{justify-content:center}}
+
 </style>
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
@@ -636,15 +659,58 @@ footer{padding:34px 0;color:#8f949e}.footer{display:flex;justify-content:space-b
 
 
 
-<section id="packages" class="section"><div class="container"><div class="section-title"><small>İHTİYACINA UYGUN SEÇİM</small><h2>PAKETLERİMİZ</h2><p>Süreyi seçin; bilgi ve satın alma işlemleri için WhatsApp üzerinden iletişime geçin.</p></div>
-<div class="pricing">
-<div class="card price"><h3>1 AYLIK</h3><div class="amount">599 <small>TL</small></div><ul><li>HD / FHD / 4K</li><li>Tüm cihazlarla uyumlu</li><li>WhatsApp destek</li></ul><a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%201%20Ayl%C4%B1k%20Paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">HEMEN AL</a></div>
-<div class="card price"><h3>3 AYLIK</h3><div class="amount">899 <small>TL</small></div><ul><li>HD / FHD / 4K</li><li>Tüm cihazlarla uyumlu</li><li>WhatsApp destek</li></ul><a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%203%20Ayl%C4%B1k%20Paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">HEMEN AL</a></div>
-<div class="card price"><h3>6 AYLIK</h3><div class="amount">1.199 <small>TL</small></div><ul><li>HD / FHD / 4K</li><li>Tüm cihazlarla uyumlu</li><li>WhatsApp destek</li></ul><a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%206%20Ayl%C4%B1k%20Paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">HEMEN AL</a></div>
-<div class="card price popular"><div class="badge">EN POPÜLER</div><h3>12 AYLIK</h3><div class="amount">1.899 <small>TL</small></div><ul><li>HD / FHD / 4K</li><li>Tüm cihazlarla uyumlu</li><li>WhatsApp destek</li></ul><a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%2012%20Ayl%C4%B1k%20Paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">HEMEN AL</a></div>
-</div>
-<div class="card trial-box"><div class="trial-copy"><div class="trial-icon">▶</div><div><h3>Önce Denemek İster misiniz?</h3><p>Ücretsiz deneme yayını talebinizi WhatsApp üzerinden iletin. Uygunluk ve detaylar için size yardımcı olalım.</p></div></div><a class="btn btn-purple" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%20%C3%BCcretsiz%20deneme%20yay%C4%B1n%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">ÜCRETSİZ DENE →</a></div>
-</div></section>
+
+<section id="packages" class="section packages-v15">
+  <div class="container">
+    <div class="section-title">
+      <small>SANA UYGUN PAKETİ SEÇ</small>
+      <h2>PRİME TV PAKETLERİ</h2>
+      <p>İhtiyacına uygun süreyi seç. Tüm paketlerde aynı premium deneyim ve WhatsApp destek.</p>
+    </div>
+
+    <div class="v15-grid">
+      <article class="v15-card">
+        <div class="v15-kicker">BAŞLANGIÇ</div><h3>1 AYLIK</h3>
+        <p class="v15-desc">Kısa dönem kullanım için pratik başlangıç seçeneği.</p>
+        <div class="v15-price">599 <span>₺</span></div><div class="v15-period">1 aylık kullanım</div>
+        <div class="v15-rule"></div><b class="v15-includes">PAKETE DAHİL</b>
+        <ul><li>✓ HD • FHD • 4K görüntü seçenekleri</li><li>✓ Canlı TV ve spor içerikleri</li><li>✓ Film & dizi içerikleri</li><li>✓ TV • Telefon • Tablet • Bilgisayar</li><li>✓ Hızlı aktivasyon</li><li>✓ WhatsApp destek</li><li>✓ Kullanıcı Kontrol Paneli</li></ul>
+        <a href="https://wa.me/31647410309?text=Merhaba%2C%201%20ayl%C4%B1k%20PR%C4%B0ME%20TV%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">PAKETİ SEÇ →</a>
+      </article>
+
+      <article class="v15-card">
+        <div class="v15-kicker">ESNEK TERCİH</div><h3>3 AYLIK</h3>
+        <p class="v15-desc">Daha uzun kullanım isteyenler için dengeli seçenek.</p>
+        <div class="v15-price">899 <span>₺</span></div><div class="v15-period">3 aylık kullanım</div>
+        <div class="v15-rule"></div><b class="v15-includes">PAKETE DAHİL</b>
+        <ul><li>✓ HD • FHD • 4K görüntü seçenekleri</li><li>✓ Canlı TV ve spor içerikleri</li><li>✓ Film & dizi içerikleri</li><li>✓ TV • Telefon • Tablet • Bilgisayar</li><li>✓ Hızlı aktivasyon</li><li>✓ WhatsApp destek</li><li>✓ Kullanıcı Kontrol Paneli</li></ul>
+        <a href="https://wa.me/31647410309?text=Merhaba%2C%203%20ayl%C4%B1k%20PR%C4%B0ME%20TV%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">PAKETİ SEÇ →</a>
+      </article>
+
+      <article class="v15-card">
+        <div class="v15-kicker">UZUN DÖNEM</div><h3>6 AYLIK</h3>
+        <p class="v15-desc">Uzun süreli kullanım için güçlü fiyat ve süre dengesi.</p>
+        <div class="v15-price">1199 <span>₺</span></div><div class="v15-period">6 aylık kullanım</div>
+        <div class="v15-rule"></div><b class="v15-includes">PAKETE DAHİL</b>
+        <ul><li>✓ HD • FHD • 4K görüntü seçenekleri</li><li>✓ Canlı TV ve spor içerikleri</li><li>✓ Film & dizi içerikleri</li><li>✓ TV • Telefon • Tablet • Bilgisayar</li><li>✓ Hızlı aktivasyon</li><li>✓ WhatsApp destek</li><li>✓ Kullanıcı Kontrol Paneli</li></ul>
+        <a href="https://wa.me/31647410309?text=Merhaba%2C%206%20ayl%C4%B1k%20PR%C4%B0ME%20TV%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">PAKETİ SEÇ →</a>
+      </article>
+
+      <article class="v15-card v15-featured">
+        <div class="v15-badge">★ EN POPÜLER</div>
+        <div class="v15-kicker">EN AVANTAJLI</div><h3>12 AYLIK</h3>
+        <p class="v15-desc">Yıl boyunca kullanım için öne çıkan uzun dönem seçeneği.</p>
+        <div class="v15-price">1899 <span>₺</span></div><div class="v15-period">12 aylık kullanım</div>
+        <div class="v15-rule"></div><b class="v15-includes">PAKETE DAHİL</b>
+        <ul><li>✓ HD • FHD • 4K görüntü seçenekleri</li><li>✓ Canlı TV ve spor içerikleri</li><li>✓ Film & dizi içerikleri</li><li>✓ TV • Telefon • Tablet • Bilgisayar</li><li>✓ Hızlı aktivasyon</li><li>✓ WhatsApp destek</li><li>✓ Kullanıcı Kontrol Paneli</li></ul>
+        <a href="https://wa.me/31647410309?text=Merhaba%2C%2012%20ayl%C4%B1k%20PR%C4%B0ME%20TV%20paketi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">12 AYLIK PAKETİ SEÇ →</a>
+      </article>
+    </div>
+
+    <div class="v15-trial"><div><small>KARAR VERMEDEN ÖNCE</small><strong>Önce deneyin, sonra paketinizi seçin.</strong></div><a href="https://wa.me/31647410309?text=Merhaba%2C%20%C3%BCcretsiz%20deneme%20yay%C4%B1n%C4%B1%20almak%20istiyorum." target="_blank" rel="noopener">▶ ÜCRETSİZ DENE</a></div>
+  </div>
+</section>
+
 
 <section id="how" class="section"><div class="container"><div class="section-title"><small>3 KOLAY ADIM</small><h2>NASIL ÇALIŞIR?</h2><p>PRİME TV'ye başlamak için süreci sade ve anlaşılır tuttuk.</p></div>
 <div class="steps"><div class="card step"><div class="num">01</div><div class="ico">📦</div><h3>Paketini Seç</h3><p>İhtiyacına uygun PRİME TV paketini seç veya önce ücretsiz deneme talep et.</p></div><div class="card step"><div class="num">02</div><div class="ico">💬</div><h3>WhatsApp'tan Ulaş</h3><p>Pakete veya ücretsiz deneme butonuna tıkla; hazır mesajla doğrudan iletişime geç.</p></div><div class="card step"><div class="num">03</div><div class="ico">⚡</div><h3>Kurulumu Tamamla</h3><p>Gerekli kullanım bilgilerini al ve cihazında kurulumu tamamla.</p></div></div>
