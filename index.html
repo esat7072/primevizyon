@@ -483,6 +483,107 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
   .foreign-featured{grid-column:auto;max-width:none}
 }
 
+
+/* V21 — Mobile fixes */
+.x-nav{border:1px solid rgba(240,185,55,.44);background:rgba(7,8,11,.86);color:#efc762}
+.x-nav:hover{border-color:#efbd43;background:rgba(10,10,12,.95)}
+
+.package-toggle{
+  display:flex;justify-content:center;gap:12px;flex-wrap:wrap;
+  margin:28px auto 24px;
+}
+.package-toggle-btn{
+  min-width:220px;min-height:52px;padding:0 22px;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  border-radius:999px;border:1px solid rgba(240,185,55,.42);
+  background:rgba(8,9,13,.9);color:#efc45e;
+  font-size:11px;font-weight:950;letter-spacing:.2px;
+  cursor:pointer;transition:.22s ease;
+}
+.package-toggle-btn:hover{transform:translateY(-2px);border-color:rgba(240,185,55,.78)}
+.package-toggle-btn.active{
+  background:linear-gradient(90deg,#d79b16,#f2c65a);
+  color:#090909;border-color:#f2c65a;
+  box-shadow:0 10px 28px rgba(240,185,55,.18)
+}
+.toggle-icon{font-size:16px}
+.package-panel{display:none}
+.package-panel.active{display:block;animation:packageFade .28s ease}
+@keyframes packageFade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+@media(max-width:680px){
+  /* Exact requested top-button feel: text + icon visible */
+  .nav{height:76px!important}
+  .nav-actions{display:flex;align-items:center;gap:7px!important}
+  .nav-social-btn{
+    width:auto!important;
+    min-width:0!important;
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 13px!important;
+    border-radius:999px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:7px!important;
+    font-size:10px!important;
+    font-weight:900!important;
+    white-space:nowrap;
+  }
+  .nav-social-btn span{display:inline!important}
+  .nav-social-btn svg{width:16px!important;height:16px!important}
+  .telegram-nav,.x-nav{
+    background:rgba(8,9,13,.95)!important;
+    color:#efc45e!important;
+    border:1px solid rgba(240,185,55,.62)!important;
+    box-shadow:none!important;
+  }
+  .whatsapp-nav{
+    color:#0b0b0b!important;
+    background:linear-gradient(90deg,#dca321,#f4ca5d)!important;
+    border:1px solid #efbc43!important;
+  }
+
+  /* Keep movie/series posters moving on mobile while still allowing touch scroll */
+  .poster-marquee{
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    mask-image:none!important;
+    -webkit-mask-image:none!important;
+  }
+  .poster-marquee::-webkit-scrollbar{display:none}
+  .poster-track{
+    animation:posterFlow 55s linear infinite!important;
+    gap:12px!important;
+  }
+  .poster-track-reverse{
+    animation:posterFlowReverse 58s linear infinite!important;
+  }
+  .poster-marquee:active .poster-track,
+  .poster-marquee:focus-within .poster-track{
+    animation-play-state:paused!important;
+  }
+
+  .package-toggle{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:8px;margin:22px 0 18px;
+  }
+  .package-toggle-btn{
+    min-width:0;min-height:48px;padding:0 10px;
+    font-size:9.5px;border-radius:13px;
+  }
+  .package-toggle-btn .toggle-icon{font-size:15px}
+  .package-region-head{margin-top:12px}
+}
+@media(max-width:430px){
+  .nav{width:min(97vw,1180px)!important}
+  .brand img{width:44px!important;height:44px!important}
+  .nav-social-btn{padding:0 10px!important;font-size:9px!important}
+  .nav-social-btn svg{width:14px!important;height:14px!important}
+  .package-toggle{grid-template-columns:1fr}
+}
+
 </style>
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
@@ -494,6 +595,10 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
 <nav class="navlinks"><a href="#home">Ana Sayfa</a><a href="#popular">Çok İzlenenler</a><a href="#packages">Paketler</a><a href="#features">Özellikler</a><a href="#how">Nasıl Çalışır?</a><a href="#why">Neden PRİME TV?</a><a href="#faq">SSS</a></nav>
 <div class="nav-actions">
 <a class="btn btn-outline trial-nav" target="_blank" rel="noopener" href="https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%20%C3%BCcretsiz%20deneme%20yay%C4%B1n%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.">Ücretsiz Dene</a>
+<a class="btn nav-social-btn x-nav" target="_blank" rel="noopener noreferrer" href="https://x.com/PrmeTv" aria-label="PRİME TV X Hesabı">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z"/></svg>
+  <span>X</span>
+</a>
 <a class="btn nav-social-btn telegram-nav" target="_blank" rel="noopener noreferrer" href="https://t.me/globalliptv12" aria-label="Telegram Kanalı">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.2 18.4 19c-.24 1.12-.88 1.4-1.78.87l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.02-8.15c.39-.35-.09-.55-.61-.2L6.03 12.73 1.23 11.23c-1.04-.33-1.06-1.04.22-1.54L20.2 2.47c.87-.32 1.63.2 1.4.73Z"/></svg>
   <span>Telegram</span>
@@ -791,7 +896,18 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
       <p>İhtiyacına uygun süreyi seç. Tüm paketlerde aynı premium deneyim ve WhatsApp destek.</p>
     </div>
 
-    <div class="package-region-head domestic-head">
+    
+<div class="package-toggle" role="tablist" aria-label="Paket bölgesi seçimi">
+  <button class="package-toggle-btn active" type="button" data-package-target="domestic" aria-selected="true">
+    <span class="toggle-icon">🇹🇷</span><span>Türkiye Paketleri</span>
+  </button>
+  <button class="package-toggle-btn" type="button" data-package-target="foreign" aria-selected="false">
+    <span class="toggle-icon">🌍</span><span>Yurt Dışı Paketleri</span>
+  </button>
+</div>
+
+<div class="package-panel active" data-package-panel="domestic">
+<div class="package-region-head domestic-head">
   <div class="region-icon">🇹🇷</div>
   <div><small>YURT İÇİ</small><h3>Türkiye Paketleri</h3><p>TL fiyatlandırmalı PRİME TV paketleri</p></div>
 </div>
@@ -836,7 +952,9 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
 
     <div class="v15-trial"><div><small>KARAR VERMEDEN ÖNCE</small><strong>Önce deneyin, sonra paketinizi seçin.</strong></div><a href="https://wa.me/31647410309?text=Merhaba%2C%20%C3%BCcretsiz%20deneme%20yay%C4%B1n%C4%B1%20almak%20istiyorum." target="_blank" rel="noopener">▶ ÜCRETSİZ DENE</a></div>
   </div>
-    <div class="foreign-packages-wrap">
+    </div>
+<div class="package-panel" data-package-panel="foreign">
+<div class="foreign-packages-wrap">
       <div class="package-region-head foreign-head">
         <div class="region-icon">🌍</div>
         <div><small>YURT DIŞI</small><h3>Premium Paketler</h3><p>Euro fiyatlandırmalı yurt dışı premium seçenekleri</p></div>
@@ -873,6 +991,7 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
       </div>
     </div>
 
+</div>
 </section>
 
 
@@ -1031,6 +1150,30 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
   </a>
 
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButtons = document.querySelectorAll('.package-toggle-btn');
+  const panels = document.querySelectorAll('.package-panel');
+
+  toggleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.packageTarget;
+
+      toggleButtons.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+
+      panels.forEach(panel => {
+        panel.classList.toggle('active', panel.dataset.packagePanel === target);
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
