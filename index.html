@@ -584,6 +584,55 @@ radial-gradient(circle at 75% 20%,rgba(117,45,190,.10),transparent 35%),linear-g
   .package-toggle{grid-template-columns:1fr}
 }
 
+
+/* V22 — Yurt dışı kart boyutlarını Türkiye kartlarıyla eşitle */
+.foreign-grid{
+  display:flex!important;
+  justify-content:center;
+  align-items:stretch;
+  gap:16px!important;
+  max-width:none!important;
+  margin:0!important;
+}
+.foreign-grid .foreign-card{
+  flex:0 0 calc((100% - 48px)/4);
+  width:calc((100% - 48px)/4);
+  max-width:none!important;
+}
+.foreign-grid .foreign-featured{
+  transform:none!important;
+}
+.foreign-grid .foreign-featured:hover{
+  transform:translateY(-6px)!important;
+}
+
+@media(max-width:1100px){
+  .foreign-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:18px!important;
+  }
+  .foreign-grid .foreign-card{
+    width:auto!important;
+    max-width:none!important;
+  }
+  .foreign-grid .foreign-featured{
+    grid-column:1/-1;
+    width:calc(50% - 9px)!important;
+    justify-self:center;
+  }
+}
+@media(max-width:680px){
+  .foreign-grid{
+    grid-template-columns:1fr!important;
+  }
+  .foreign-grid .foreign-card,
+  .foreign-grid .foreign-featured{
+    width:100%!important;
+    grid-column:auto!important;
+  }
+}
+
 </style>
   <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
