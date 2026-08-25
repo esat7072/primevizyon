@@ -1488,6 +1488,269 @@ footer{
   contain-intrinsic-size:800px;
 }
 
+
+/* V49 — Afiş detay penceresi */
+.poster-card{cursor:pointer}
+.content-detail-modal{position:fixed;inset:0;z-index:120000;display:none;align-items:center;justify-content:center;padding:20px}.content-detail-modal.open{display:flex}.content-detail-bg{position:absolute;inset:0;background:rgba(2,3,7,.88);backdrop-filter:blur(9px)}.content-detail-box{position:relative;z-index:2;width:min(720px,94vw);max-height:90vh;overflow:auto;border:1px solid rgba(240,185,55,.5);border-radius:22px;background:linear-gradient(155deg,#151821,#080a0f 72%);box-shadow:0 30px 90px rgba(0,0,0,.72);padding:28px}.content-detail-close{position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(240,185,55,.28);background:#0b0d12;color:#fff;font-size:22px;cursor:pointer}.content-detail-type{display:inline-block;color:#a66dea;font-size:9px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:7px}.content-detail-title{margin:0 44px 10px 0;color:#f1c45c;font-size:28px;line-height:1.15}.content-detail-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:17px}.content-detail-meta span{padding:7px 10px;border-radius:9px;background:rgba(255,255,255,.035);border:1px solid rgba(240,185,55,.13);color:#c9cdd4;font-size:10px}.content-detail-summary{margin:0;color:#b7bdc7;font-size:12px;line-height:1.75}.content-detail-actions{display:flex;gap:10px;margin-top:23px}.content-watch{min-height:48px;padding:0 22px;border:1px solid #efbd42;border-radius:12px;background:linear-gradient(90deg,#d99d19,#f1c75d);color:#08090c;font-size:11px;font-weight:950;cursor:pointer}.content-cancel{min-height:48px;padding:0 18px;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:#0c0e13;color:#ddd;font-size:10px;font-weight:900;cursor:pointer}@media(max-width:560px){.content-detail-box{padding:24px 18px 19px;border-radius:18px}.content-detail-title{font-size:22px}.content-detail-summary{font-size:11px}.content-detail-actions{display:grid}.content-watch,.content-cancel{width:100%}}
+
+
+/* V50 — IMDb puanı + daha uzun özetler */
+.content-imdb{
+  color:#f5c84b!important;
+  border-color:rgba(245,200,75,.34)!important;
+  background:rgba(245,200,75,.06)!important;
+}
+.content-imdb b{
+  color:#ffd96a!important;
+  font-weight:950!important;
+}
+.content-detail-summary{
+  line-height:1.72!important;
+  max-width:760px!important;
+  font-size:12px!important;
+}
+@media(max-width:620px){
+  .content-detail-summary{
+    font-size:11px!important;
+    line-height:1.68!important;
+  }
+}
+
+
+/* =========================================================
+   V51 — PRİME TV DESTEK ASİSTANI
+   Sabit bilgi tabanlı, ücretsiz, site içi chatbot
+   ========================================================= */
+.primebot-launch{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:120000;
+  min-height:52px;
+  padding:0 17px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border-radius:999px;
+  border:1px solid rgba(240,185,55,.62);
+  background:linear-gradient(135deg,#0c0e13,#14101b);
+  color:#f3c75e;
+  box-shadow:0 18px 46px rgba(0,0,0,.48),0 0 22px rgba(240,185,55,.10);
+  font-size:11px;
+  font-weight:950;
+  cursor:pointer;
+  transition:.22s ease;
+}
+.primebot-launch:hover{
+  transform:translateY(-3px);
+  border-color:#efbd42;
+  box-shadow:0 22px 54px rgba(0,0,0,.54),0 0 28px rgba(240,185,55,.16);
+}
+.primebot-launch-icon{
+  width:31px;
+  height:31px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:linear-gradient(145deg,#f0c65a,#c68b13);
+  color:#090a0c;
+  font-size:16px;
+  box-shadow:0 0 16px rgba(240,185,55,.18);
+}
+.primebot{
+  position:fixed;
+  right:22px;
+  bottom:86px;
+  z-index:120001;
+  width:min(390px,calc(100vw - 26px));
+  height:min(610px,calc(100vh - 120px));
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+  border-radius:22px;
+  border:1px solid rgba(240,185,55,.55);
+  background:linear-gradient(180deg,#10121a,#080a0f 58%,#07080b);
+  box-shadow:0 32px 90px rgba(0,0,0,.66),0 0 36px rgba(240,185,55,.09);
+}
+.primebot.is-open{display:flex}
+.primebot-head{
+  min-height:72px;
+  padding:14px 15px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  border-bottom:1px solid rgba(240,185,55,.14);
+  background:
+    radial-gradient(circle at 20% 0,rgba(141,76,255,.14),transparent 42%),
+    linear-gradient(180deg,#141722,#0e1016);
+}
+.primebot-avatar{
+  flex:0 0 43px;
+  width:43px;height:43px;
+  display:grid;place-items:center;
+  border-radius:14px;
+  background:linear-gradient(145deg,#f0c65a,#bd8210);
+  color:#090a0c;
+  font-size:20px;
+  box-shadow:0 0 18px rgba(240,185,55,.16);
+}
+.primebot-head-copy{min-width:0}
+.primebot-head-copy strong{
+  display:block;
+  color:#f2c65e;
+  font-size:13px;
+}
+.primebot-head-copy small{
+  display:block;
+  margin-top:3px;
+  color:#8f96a1;
+  font-size:8.5px;
+}
+.primebot-online{
+  display:inline-block;
+  width:7px;height:7px;
+  margin-right:5px;
+  border-radius:50%;
+  background:#65d98b;
+  box-shadow:0 0 9px rgba(101,217,139,.65);
+}
+.primebot-close{
+  margin-left:auto;
+  width:34px;height:34px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.09);
+  background:#0b0d12;
+  color:#d9dce1;
+  font-size:20px;
+  cursor:pointer;
+}
+.primebot-messages{
+  flex:1;
+  overflow-y:auto;
+  padding:16px;
+  scroll-behavior:smooth;
+}
+.primebot-messages::-webkit-scrollbar{width:5px}
+.primebot-messages::-webkit-scrollbar-thumb{background:rgba(240,185,55,.22);border-radius:999px}
+.primebot-row{
+  display:flex;
+  margin:0 0 11px;
+}
+.primebot-row.user{justify-content:flex-end}
+.primebot-bubble{
+  max-width:84%;
+  padding:11px 13px;
+  border-radius:15px;
+  font-size:10.5px;
+  line-height:1.6;
+  white-space:pre-line;
+}
+.primebot-row.bot .primebot-bubble{
+  color:#d9dce2;
+  background:#11141b;
+  border:1px solid rgba(240,185,55,.10);
+  border-top-left-radius:6px;
+}
+.primebot-row.user .primebot-bubble{
+  color:#090a0c;
+  background:linear-gradient(135deg,#e1ab2d,#f2cb68);
+  border-top-right-radius:6px;
+  font-weight:800;
+}
+.primebot-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:2px 0 13px;
+}
+.primebot-action{
+  min-height:34px;
+  padding:0 10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  border:1px solid rgba(240,185,55,.28);
+  background:rgba(240,185,55,.045);
+  color:#efc45d;
+  font-size:8.8px;
+  font-weight:900;
+  text-decoration:none;
+  cursor:pointer;
+}
+.primebot-action:hover{
+  background:rgba(240,185,55,.10);
+  border-color:rgba(240,185,55,.52);
+}
+.primebot-quick{
+  padding:10px 12px 0;
+  display:flex;
+  gap:7px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+.primebot-quick::-webkit-scrollbar{display:none}
+.primebot-chip{
+  flex:0 0 auto;
+  min-height:32px;
+  padding:0 10px;
+  border-radius:999px;
+  border:1px solid rgba(141,76,255,.24);
+  background:rgba(141,76,255,.055);
+  color:#ccb5ef;
+  font-size:8.5px;
+  font-weight:850;
+  cursor:pointer;
+}
+.primebot-form{
+  padding:10px 12px 12px;
+  display:flex;
+  gap:8px;
+  border-top:1px solid rgba(255,255,255,.04);
+}
+.primebot-input{
+  flex:1;
+  min-width:0;
+  height:43px;
+  padding:0 13px;
+  border-radius:12px;
+  border:1px solid rgba(240,185,55,.15);
+  outline:none;
+  background:#0b0d12;
+  color:#eef0f3;
+  font-size:10px;
+}
+.primebot-input:focus{border-color:rgba(240,185,55,.48)}
+.primebot-send{
+  width:44px;height:43px;
+  display:grid;place-items:center;
+  border-radius:12px;
+  border:1px solid #efbd42;
+  background:linear-gradient(145deg,#e0a928,#f2cb68);
+  color:#090a0c;
+  font-size:16px;
+  cursor:pointer;
+}
+@media(max-width:620px){
+  .primebot-launch{
+    right:12px;
+    bottom:14px;
+    min-height:48px;
+    padding:0 13px;
+  }
+  .primebot-launch span:last-child{display:none}
+  .primebot{
+    right:8px;
+    left:8px;
+    bottom:72px;
+    width:auto;
+    height:min(72vh,620px);
+    border-radius:18px;
+  }
+}
+
 </style>
 <link href="favicon.png" rel="icon" sizes="512x512" type="image/png"/>
 <link href="favicon.png" rel="apple-touch-icon"/>
@@ -2303,5 +2566,257 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+
+<div class="content-detail-modal" id="contentDetailModal" aria-hidden="true"><div class="content-detail-bg" data-content-close></div><div class="content-detail-box" role="dialog" aria-modal="true"><button class="content-detail-close" type="button" data-content-close aria-label="Kapat">×</button><span class="content-detail-type" id="contentDetailType"></span><h3 class="content-detail-title" id="contentDetailTitle"></h3><div class="content-detail-meta"><span id="contentDetailYear"></span><span id="contentDetailLength"></span><span id="contentDetailGenre"></span><span class="content-imdb">★ IMDb <b id="contentDetailImdb"></b>/10</span></div><p class="content-detail-summary" id="contentDetailSummary"></p><div class="content-detail-actions"><button class="content-watch" type="button" id="contentWatchBtn">▶ HEMEN İZLE</button><button class="content-cancel" type="button" data-content-close>KAPAT</button></div></div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){const INFO={"Avengers: Endgame":["2019","3 sa 1 dk","Aksiyon • Macera • Bilim Kurgu","8.4","Thanos’un yıkıcı hamlesinin ardından hayatta kalan Avengers üyeleri, kaybettiklerini geri getirmek ve evreni yeniden düzene sokmak için son bir plan hazırlar. Geçmişte verilen kararların sonuçlarıyla yüzleşen ekip, zamanla yarışırken hem kişisel fedakârlıklar yapmak hem de evrenin geleceğini belirleyecek son savaşa hazırlanmak zorundadır."],"Avengers: Infinity War":["2018","2 sa 29 dk","Aksiyon • Macera • Bilim Kurgu","8.4","Avengers ve müttefikleri, Sonsuzluk Taşlarını ele geçirerek evrenin kaderini değiştirmek isteyen Thanos’a karşı güçlerini birleştirir. Dünyanın farklı köşelerindeki kahramanlar aynı tehdide karşı birleşirken, Thanos’un planını durdurmak için yapılan mücadele giderek daha büyük ve geri dönüşü zor sonuçlar doğurur."],"Spider-Man: No Way Home":["2021","2 sa 28 dk","Aksiyon • Macera • Fantastik","8.1","Peter Parker’ın kimliğinin açığa çıkmasıyla hayatı altüst olur. Doctor Strange’den yardım istemesi, çoklu evrenin kapılarını beklenmedik şekilde açar. Peter, sevdiklerinin hayatını normale döndürmeye çalışırken kontrolünden çıkan büyü farklı evrenlerden tehlikeli düşmanları kendi dünyasına getirir ve onu yetişkinliğe zorlayan ağır seçimlerle karşı karşıya bırakır."],"Deadpool & Wolverine":["2024","2 sa 8 dk","Aksiyon • Macera • Komedi","7.5","Wade Wilson, kendi dünyasını büyük bir tehditten kurtarmak için isteksiz bir Wolverine varyantıyla güçlerini birleştirmek zorunda kalır. İkilinin çatışmalı ortaklığı, farklı evrenler ve geçmiş travmalar arasında ilerleyen tehlikeli bir göreve dönüşür. Mizah, aksiyon ve karakterlerin kişisel hesaplaşmaları hikâyenin merkezinde yer alır."],"Black Panther":["2018","2 sa 14 dk","Aksiyon • Macera • Bilim Kurgu","7.3","T’Challa, Wakanda tahtına geçtikten sonra hem ülkesinin geleceğini hem de dünyanın güvenliğini tehdit eden güçlü bir rakiple yüzleşir. Yeni kral olarak sorumluluklarını üstlenen T’Challa, Wakanda’nın gelenekleri ile dünyaya açılma ihtiyacı arasında denge kurmaya çalışır. Geçmişten gelen bir hesaplaşma ise tahtın ve ülkenin geleceğini tehlikeye atar."],"Guardians of the Galaxy Vol. 3":["2023","2 sa 30 dk","Aksiyon • Macera • Bilim Kurgu","7.9","Galaksinin Koruyucuları, Rocket’ın geçmişiyle bağlantılı ölümcül bir tehdide karşı arkadaşlarını kurtarmak için tehlikeli bir göreve çıkar. Rocket’ın geçmişinin ortaya çıkmasıyla ekip bu kez yalnızca galaksiyi değil, kendi aile bağlarını da korumak zorunda kalır. Görev ilerledikçe dostluk, kayıp ve fedakârlık temaları daha da öne çıkar."],"Thor: Ragnarok":["2017","2 sa 10 dk","Aksiyon • Macera • Komedi","7.9","Thor, Asgard’ın yaklaşan yıkımını önlemek için güçlü Hela’ya karşı mücadele ederken beklenmedik müttefiklerle yeniden bir araya gelir. Sakaar’da mahsur kalan Thor, hem özgürlüğünü kazanmak hem de Asgard’a dönmek için mücadele eder. Eski dostlar ve yeni müttefiklerle kurduğu ekip, yaklaşan Ragnarök’e karşı son umut haline gelir."],"Iron Man":["2008","2 sa 6 dk","Aksiyon • Macera • Bilim Kurgu","7.9","Milyarder mucit Tony Stark, kendi geliştirdiği zırhla geçmişteki hatalarını telafi etmeye ve yeni tehditlerle savaşmaya karar verir. Esaretten kurtulduktan sonra silah teknolojisinin sonuçlarını sorgulayan Tony Stark, geliştirdiği zırhı yalnızca kendini korumak için değil, yarattığı tehditlerle yüzleşmek için de kullanmaya başlar."],"Captain America: Civil War":["2016","2 sa 27 dk","Aksiyon • Macera • Bilim Kurgu","7.8","Avengers ekibi, süper kahramanların denetlenmesi konusunda ikiye bölünür; Captain America ve Iron Man karşı karşıya gelir. Devlet denetimi tartışması Avengers üyelerini iki karşıt gruba bölerken eski dostluklar ciddi biçimde sınanır. Kişisel geçmişler ve saklanan gerçekler, çatışmayı yalnızca politik olmaktan çıkarır."],"Top Gun: Maverick":["2022","2 sa 10 dk","Aksiyon • Dram","8.2","Pete “Maverick” Mitchell, seçkin pilotlardan oluşan yeni bir ekibi son derece zorlu ve tehlikeli bir görev için eğitmek üzere geri döner. Maverick, geçmişiyle bağlantılı genç bir pilotun da bulunduğu seçkin ekibi neredeyse imkânsız bir görev için hazırlar. Eğitim süreci boyunca deneyim, kayıp, cesaret ve sorumluluk yeniden sınanır."],"The Dark Knight":["2008","2 sa 32 dk","Aksiyon • Suç • Dram","9.1","Batman, Gotham’da kaos yaratmaya kararlı Joker’in karşısında şehrin düzenini ve kendi ilkelerini korumak için ağır bir mücadele verir. Joker’in öngörülemez saldırıları Gotham’ın düzenini sarsarken Batman, hukuk ile kaos arasındaki çizginin giderek bulanıklaştığını görür. Mücadele, kahramanlığın bedelini ve ahlaki sınırları sert biçimde sorgular."],"Interstellar":["2014","2 sa 49 dk","Bilim Kurgu • Dram • Macera","8.7","Dünya yaşanamaz hale gelirken bir grup astronot, insanlık için yeni bir yuva bulmak amacıyla bilinmeyen bir galaksiye doğru yolculuğa çıkar. Cooper ve ekibi, solucan deliğinin ötesinde yaşanabilir gezegenler ararken zamanın göreceli akışı sevdikleriyle aralarındaki mesafeyi büyütür. Bilimsel keşif, aile bağı ve insanlığın hayatta kalma umudu iç içe ilerler."],"Oppenheimer":["2023","3 sa","Biyografi • Dram • Tarih","8.2","Fizikçi J. Robert Oppenheimer’ın atom bombasının geliştirilmesindeki rolü ve bu tarihi projenin bilimsel, siyasi ve kişisel sonuçları anlatılır. Manhattan Projesi’nin yükselişiyle birlikte Oppenheimer’ın bilimsel başarısı, vicdani çatışmaları ve siyasi baskılarla sınanır. Film, atom çağının doğuşunu hem kişisel hem de tarihsel sonuçlarıyla ele alır."],"John Wick: Chapter 4":["2023","2 sa 49 dk","Aksiyon • Suç • Gerilim","7.6","John Wick, özgürlüğünü kazanabilmek için Yüksek Şûra’ya karşı savaşını dünyanın farklı noktalarına taşıyarak en tehlikeli rakipleriyle yüzleşir. John, Yüksek Şûra’nın hâkimiyetinden kurtulmak için eski dostlar ve yeni düşmanlar arasında ilerler. Düello kuralları, sadakat ve bedel kavramları onu özgürlüğüne uzanan son derece tehlikeli bir yola sokar."],"The Batman":["2022","2 sa 56 dk","Suç • Dram • Gizem","7.8","Batman, Gotham’ın seçkinlerini hedef alan Riddler’ın bıraktığı ipuçlarını takip ederken şehrin karanlık geçmişine uzanan bir komplonun içine çekilir. Genç Batman, Riddler’ın cinayetlerini araştırırken Gotham’ın güçlü aileleri ve kurumları arasındaki yolsuzluk ağını ortaya çıkarır. Soruşturma ilerledikçe kendi ailesinin geçmişiyle de yüzleşmek zorunda kalır."],"Avatar: The Way of Water":["2022","3 sa 12 dk","Bilim Kurgu • Macera • Fantastik","7.5","Jake Sully ve ailesi Pandora’da yeni bir tehdit ortaya çıkınca deniz halkının yanına sığınır ve ailelerini korumak için mücadele eder. Sully ailesi, güvenli bir yaşam kurmak için Pandora’nın okyanus topluluklarına sığınır. Yeni çevreye uyum sağlamaya çalışırken eski düşmanların dönüşü onları ailelerini korumak için yeniden savaşa sürükler."],"Dune: Part Two":["2024","2 sa 46 dk","Bilim Kurgu • Macera • Dram","8.4","Paul Atreides, Fremenlerle birleşerek ailesini yok eden güçlerden intikam almaya hazırlanırken Arrakis’in ve galaksinin geleceğini belirleyecek seçimlerle karşılaşır. Paul, Fremen kültürünün içine daha fazla çekilirken hem aşkı hem de kehanetlerin yüküyle mücadele eder. Politik güç, intikam ve yaklaşan kutsal savaş, onun vereceği kararları galaksinin geleceği açısından belirleyici hale getirir."],"Joker":["2019","2 sa 2 dk","Suç • Dram • Gerilim","8.3","Toplumdan dışlanan Arthur Fleck’in giderek karanlık bir dönüşüm geçirerek Gotham’ın simgesel suç figürlerinden Joker’e dönüşmesi anlatılır. Arthur’un yalnızlığı ve toplumdan dışlanması derinleştikçe, yaşadığı kırılmalar onu giderek daha karanlık bir kimliğe sürükler. Gotham’daki toplumsal huzursuzluk da bu dönüşümün etkisini büyütür."],"Fight Club":["1999","2 sa 19 dk","Dram","8.8","Hayatından memnun olmayan bir ofis çalışanı, Tyler Durden ile tanıştıktan sonra gizli bir dövüş kulübünün ve giderek büyüyen radikal bir hareketin içine sürüklenir. Anlatıcının Tyler Durden ile kurduğu bağ, sıradan hayata karşı bir başkaldırı olarak başlayan dövüş kulübünü çok daha tehlikeli bir harekete dönüştürür. Kimlik ve özgürlük kavramları giderek sorgulanır."],"Inception":["2010","2 sa 28 dk","Bilim Kurgu • Aksiyon • Gerilim","8.8","Rüyaların içine girerek bilgi çalan Cobb’a, bu kez bir fikri zihne yerleştirmesi gereken son derece karmaşık bir görev teklif edilir. Cobb ve ekibi, hedeflerinin zihninde katman katman ilerleyen rüyalar kurarken gerçeklik ile bilinçaltı arasındaki sınırlar belirsizleşir. Görev, Cobb’un kendi geçmişi ve suçluluk duygusuyla hesaplaşmasını da zorunlu kılar."],"Stranger Things":["2016","5 sezon","Bilim Kurgu • Gizem • Dram","8.6","Küçük bir kasabada bir çocuğun kaybolması, gizli deneyler, doğaüstü güçler ve farklı bir boyutla bağlantılı büyük bir gizemi ortaya çıkarır. Hawkins kasabasındaki arkadaş grubu, Upside Down’dan gelen tehditler büyüdükçe gizli laboratuvarlar ve hükümet sırlarıyla karşılaşır. Dostluk, aile ve büyüme temaları doğaüstü olaylarla birlikte gelişir."],"Squid Game":["2021","3 sezon","Gerilim • Dram","8.0","Maddi sıkıntı yaşayan yüzlerce kişi, büyük bir para ödülü için çocuk oyunlarından oluşan ancak ölümcül sonuçları olan gizemli bir yarışmaya katılır. Yarışmacılar para ödülüne yaklaştıkça oyunların fiziksel tehlikesi kadar ahlaki baskısı da artar. Hayatta kalma arzusu, güven, ihanet ve toplumsal eşitsizlik üzerine sert seçimlere dönüşür."],"Peaky Blinders":["2013","6 sezon","Suç • Dram","8.7","Birinci Dünya Savaşı sonrası Birmingham’da Tommy Shelby liderliğindeki Peaky Blinders ailesi, güç ve nüfuzunu artırmak için tehlikeli bir yükselişe geçer. Tommy Shelby ailesinin gücünü büyütürken politikacılar, rakip çeteler ve kendi iç çatışmalarıyla mücadele eder. Başarı arttıkça güç, sadakat ve travmanın bedeli daha ağır hale gelir."],"Game of Thrones":["2011","8 sezon","Fantastik • Dram • Macera","9.2","Westeros’un güçlü aileleri Demir Taht için mücadele ederken kuzeyde tüm krallıkları tehdit eden kadim bir tehlike yeniden ortaya çıkar. İttifaklar, ihanetler ve savaşlar Westeros’un kaderini sürekli değiştirirken kuzeydeki doğaüstü tehdit giderek yaklaşır. Güç mücadelesi sonunda kişisel hırslarla tüm kıtanın hayatta kalma savaşı iç içe geçer."],"The Last of Us":["2023","2 sezon","Dram • Aksiyon • Kıyamet Sonrası","8.7","Yıkıma uğramış bir dünyada Joel, insanlığın geleceği açısından kritik olabilecek Ellie’yi tehlikeli bir yolculukta korumakla görevlendirilir. Joel ve Ellie’nin yolculuğu yalnızca enfekte yaratıklarla değil, çökmüş toplumun sert kurallarıyla da sınanır. Zamanla aralarında gelişen bağ, görevlerinin anlamını ve verecekleri kararları kökten değiştirir."],"House of the Dragon":["2022","2+ sezon","Fantastik • Dram","8.3","Game of Thrones’tan yüzyıllar önce Targaryen Hanedanı içindeki taht mücadelesi, Westeros’u büyük bir iç savaşa sürükler. Targaryen ailesi içindeki miras ve taht tartışmaları, akrabalık bağlarını parçalayarak ejderhaların da dahil olduğu büyük bir iç savaşa dönüşür. Politik ittifaklar ve kişisel hırslar krallığın dengesini bozar."],"Wednesday":["2022","2 sezon","Gizem • Komedi • Fantastik","8.0","Wednesday Addams, Nevermore Akademisi’nde yeni hayatına uyum sağlamaya çalışırken bir dizi cinayetin ardındaki doğaüstü gizemi araştırır. Wednesday, okulun sırlarını ve kasabadaki saldırıları araştırırken kendi psişik yeteneklerini anlamaya çalışır. Yeni arkadaşlıklar ve aile geçmişinden gelen sırlar, soruşturmayı giderek kişisel hale getirir."],"The Boys":["2019","4+ sezon","Aksiyon • Kara Komedi • Dram","8.6","Süper kahramanların güçlerini kötüye kullandığı bir dünyada, The Boys adlı ekip onları kontrol eden dev şirkete ve yozlaşmış kahramanlara karşı mücadele eder. Billy Butcher ve ekibi, halkın kahraman olarak gördüğü süper güçlü kişilerin karanlık yüzünü ortaya çıkarmaya çalışır. Şirket çıkarları, propaganda ve güç yozlaşması mücadeleyi giderek daha tehlikeli hale getirir."],"Breaking Bad":["2008","5 sezon","Suç • Dram • Gerilim","9.5","Kanser teşhisi alan kimya öğretmeni Walter White, ailesine para bırakabilmek için eski öğrencisi Jesse Pinkman ile uyuşturucu üretmeye başlar. Walter’ın başlangıçta ailesi için verdiğini düşündüğü kararlar onu giderek daha hırslı ve acımasız bir suç figürüne dönüştürür. Jesse ile ilişkisi, suç dünyasının baskısı ve aile hayatı sürekli çatışma halindedir."],"Better Call Saul":["2015","6 sezon","Suç • Dram","9.0","Jimmy McGill’in küçük çaplı bir avukatlıktan Saul Goodman kimliğine uzanan dönüşümü ve suç dünyasıyla giderek derinleşen ilişkisi anlatılır. Jimmy’nin Saul Goodman’a dönüşümü küçük etik tavizlerle başlar ve giderek geri dönüşü zor kararlara evrilir. Kim Wexler ile ilişkisi ve kartel dünyasıyla teması, hayatındaki tüm dengeleri değiştirir."],"Money Heist":["2017","5 kısım","Suç • Gerilim • Dram","8.2","Profesör lakaplı gizemli bir stratejist, sıra dışı bir ekiple İspanya tarihinin en büyük soygunlarından birini gerçekleştirmeyi planlar. Soygun planı ilerledikçe rehineler, polis ve ekip içindeki ilişkiler Profesör’ün kusursuz görünen stratejisini zorlar. Baskı arttıkça aşk, sadakat ve fedakârlık planın önüne geçmeye başlar."],"Dark":["2017","3 sezon","Bilim Kurgu • Gizem • Dram","8.7","Almanya’nın küçük Winden kasabasında çocukların kaybolması, dört aileyi kuşaklar boyunca birbirine bağlayan karmaşık bir zaman gizemini ortaya çıkarır. Winden’daki kayıpların farklı zaman dönemleriyle bağlantılı olduğu anlaşılınca aile sırları ve neden-sonuç ilişkileri giderek karmaşıklaşır. Karakterler zaman döngüsünü kırmaya çalışırken kendi kaderleriyle yüzleşir."],"The Witcher":["2019","4+ sezon","Fantastik • Aksiyon • Macera","7.9","Canavar avcısı Geralt of Rivia’nın kaderi, güçlü büyücü Yennefer ve sıra dışı yeteneklere sahip Prenses Ciri ile kesişir. Geralt, insanlar ve canavarlar arasındaki gri alanda yolunu bulmaya çalışırken Ciri’nin taşıdığı büyük güç kıtanın dengelerini değiştirir. Yennefer’in hikâyesiyle birleşen bu kader ağı büyük çatışmalara zemin hazırlar."],"The Mandalorian":["2019","3 sezon","Bilim Kurgu • Macera • Aksiyon","8.6","Galaksinin uzak bölgelerinde çalışan yalnız bir ödül avcısının hayatı, gizemli ve güçlü bir çocuğu korumaya başlamasıyla değişir. Din Djarin, Grogu’yu korumaya karar verdikten sonra avcılıktan çok daha büyük bir sorumluluğun içine girer. Yolculuk boyunca Mandalorian gelenekleri, İmparatorluk kalıntıları ve yeni müttefikler hikâyeyi şekillendirir."],"Loki":["2021","2 sezon","Bilim Kurgu • Fantastik • Macera","8.2","Loki, zaman çizgisini koruyan gizemli TVA tarafından yakalanır ve çoklu evreni etkileyebilecek olayların merkezine sürüklenir. TVA ile karşılaşan Loki, zamanın farklı dallarında kendi varyantları ve çoklu evreni tehdit eden sonuçlarla yüzleşir. Macera ilerledikçe özgür irade, kader ve kimlik kavramları hikâyenin merkezine yerleşir."],"The Walking Dead":["2010","11 sezon","Korku • Dram • Gerilim","8.1","Zombi salgınıyla çöken dünyada hayatta kalan bir grup insan, hem yürüyen ölülerle hem de diğer insanların yarattığı tehditlerle mücadele eder. Hayatta kalanlar güvenli bir yaşam kurmaya çalışırken yeni topluluklar, liderler ve çatışmalar ortaya çıkar. Zombiler kadar insan doğasının karanlık yönleri de grubun geleceğini sürekli tehdit eder."],"Sherlock":["2010","4 sezon","Suç • Gizem • Dram","9.1","Modern Londra’da yaşayan sıra dışı dedektif Sherlock Holmes ve Dr. John Watson, zekâ gerektiren karmaşık suçları birlikte çözmeye çalışır. Sherlock’un sıra dışı gözlem gücü ve Watson’ın dengeli yaklaşımı, onları Londra’nın en karmaşık vakalarına taşır. Moriarty gibi rakipler devreye girdikçe oyun yalnızca suç çözmekten çıkar ve kişisel bir savaşa dönüşür."],"Narcos":["2015","3 sezon","Suç • Dram • Biyografi","8.7","Kolombiya’daki güçlü uyuşturucu kartellerinin yükselişi ve onları durdurmaya çalışan güvenlik güçlerinin mücadelesi dramatize edilir. Uyuşturucu ticaretinin büyümesi, karteller ile devlet güçleri arasında uzun ve kanlı bir çatışma yaratır. Gerçek olaylardan esinlenen anlatı, suç ekonomisinin siyasete ve topluma etkisini de gösterir."],"The Crown":["2016","6 sezon","Tarih • Dram","8.6","Kraliçe II. Elizabeth’in hükümdarlığı boyunca Britanya monarşisinin siyasi, toplumsal ve kişisel sınavları dramatik bir anlatımla ele alınır. Kraliyet ailesinin özel hayatı, devlet sorumlulukları ve değişen toplumsal beklentilerle sürekli çatışır. Farklı dönemlerdeki siyasi krizler ve aile içi gerilimler monarşinin dönüşümünü şekillendirir."],"Arcane":["2021","2 sezon","Animasyon • Aksiyon • Dram","9.0","Piltover ve Zaun şehirleri arasındaki gerilim büyürken iki kız kardeşin yolları, teknoloji, güç ve çatışmalar nedeniyle ayrılır. Vi ve Jinx’in trajik biçimde ayrılan yolları, Piltover ile Zaun arasındaki sınıfsal çatışmanın merkezine yerleşir. Hextech’in yükselişi ve güç mücadeleleri, iki şehrin geleceğini geri dönüşü zor bir noktaya taşır."]};const modal=document.getElementById('contentDetailModal');if(!modal)return;const q=id=>document.getElementById(id);function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}document.querySelectorAll('.poster-card').forEach(card=>{card.setAttribute('tabindex','0');card.setAttribute('role','button');const open=()=>{const title=card.querySelector('.poster-overlay strong')?.textContent.trim();const type=card.querySelector('.poster-overlay span')?.textContent.trim()||'İçerik';const d=INFO[title];if(!d)return;q('contentDetailType').textContent=type;q('contentDetailTitle').textContent=title;q('contentDetailYear').textContent=d[0];q('contentDetailLength').textContent=d[1];q('contentDetailGenre').textContent=d[2];q('contentDetailImdb').textContent=d[3];q('contentDetailSummary').textContent=d[4];modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};card.addEventListener('click',open);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});modal.querySelectorAll('[data-content-close]').forEach(x=>x.addEventListener('click',close));q('contentWatchBtn').addEventListener('click',()=>{close();document.getElementById('packages')?.scrollIntoView({behavior:'smooth',block:'start'})});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))close()})});
+</script>
+
+
+<button class="primebot-launch" id="primebotLaunch" type="button" aria-label="PRİME TV Asistanını Aç">
+  <span class="primebot-launch-icon">✦</span>
+  <span>PRİME TV ASİSTANI</span>
+</button>
+
+<div class="primebot" id="primebot" aria-hidden="true">
+  <div class="primebot-head">
+    <div class="primebot-avatar">✦</div>
+    <div class="primebot-head-copy">
+      <strong>PRİME TV Asistanı</strong>
+      <small><span class="primebot-online"></span>Paketler, kurulum ve destek bilgileri</small>
+    </div>
+    <button class="primebot-close" id="primebotClose" type="button" aria-label="Kapat">×</button>
+  </div>
+
+  <div class="primebot-messages" id="primebotMessages"></div>
+
+  <div class="primebot-quick">
+    <button class="primebot-chip" type="button" data-bot-question="Türkiye paketleri ne kadar?">Türkiye Paketleri</button>
+    <button class="primebot-chip" type="button" data-bot-question="Yurt dışı paketleri ne kadar?">Yurt Dışı</button>
+    <button class="primebot-chip" type="button" data-bot-question="Kurulum nasıl yapılır?">Kurulum</button>
+    <button class="primebot-chip" type="button" data-bot-question="Ücretsiz deneme var mı?">Ücretsiz Deneme</button>
+    <button class="primebot-chip" type="button" data-bot-question="Müşteri paneline nasıl girerim?">Müşteri Paneli</button>
+  </div>
+
+  <form class="primebot-form" id="primebotForm">
+    <input class="primebot-input" id="primebotInput" type="text" autocomplete="off" placeholder="Bir şey sorun..." aria-label="Mesajınızı yazın">
+    <button class="primebot-send" type="submit" aria-label="Gönder">➤</button>
+  </form>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const bot=document.getElementById('primebot');
+  const launch=document.getElementById('primebotLaunch');
+  const close=document.getElementById('primebotClose');
+  const messages=document.getElementById('primebotMessages');
+  const form=document.getElementById('primebotForm');
+  const input=document.getElementById('primebotInput');
+  if(!bot || !launch || !messages || !form || !input)return;
+
+  let welcomed=false;
+
+  const normalize=(text)=>{
+    return String(text||'').toLocaleLowerCase('tr-TR')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .replace(/ı/g,'i').replace(/ş/g,'s').replace(/ğ/g,'g')
+      .replace(/ü/g,'u').replace(/ö/g,'o').replace(/ç/g,'c')
+      .replace(/[^\w\s€₺]/g,' ').replace(/\s+/g,' ').trim();
+  };
+
+  function scrollBottom(){
+    requestAnimationFrame(()=>{messages.scrollTop=messages.scrollHeight});
+  }
+
+  function addUser(text){
+    const row=document.createElement('div');
+    row.className='primebot-row user';
+    const bubble=document.createElement('div');
+    bubble.className='primebot-bubble';
+    bubble.textContent=text;
+    row.appendChild(bubble);
+    messages.appendChild(row);
+    scrollBottom();
+  }
+
+  function addBot(text,actions=[]){
+    const row=document.createElement('div');
+    row.className='primebot-row bot';
+    const wrap=document.createElement('div');
+    const bubble=document.createElement('div');
+    bubble.className='primebot-bubble';
+    bubble.textContent=text;
+    wrap.appendChild(bubble);
+
+    if(actions.length){
+      const actionWrap=document.createElement('div');
+      actionWrap.className='primebot-actions';
+      actions.forEach(a=>{
+        const el=document.createElement(a.href?'a':'button');
+        el.className='primebot-action';
+        el.textContent=a.label;
+        if(a.href){
+          el.href=a.href;
+          if(a.external){el.target='_blank';el.rel='noopener noreferrer'}
+        }else{
+          el.type='button';
+          el.addEventListener('click',a.onClick);
+        }
+        actionWrap.appendChild(el);
+      });
+      wrap.appendChild(actionWrap);
+    }
+
+    row.appendChild(wrap);
+    messages.appendChild(row);
+    scrollBottom();
+  }
+
+  function openSetup(){
+    const setupModal=document.getElementById('setupWelcome');
+    if(!setupModal){
+      document.querySelector('#features')?.scrollIntoView({behavior:'smooth'});
+      return;
+    }
+    setupModal.querySelectorAll('[data-setup-screen]').forEach(screen=>{
+      screen.classList.toggle('active',screen.dataset.setupScreen==='devices');
+    });
+    const guide=document.getElementById('setupGuide');
+    const footer=document.getElementById('setupDeviceFooter');
+    if(guide)guide.hidden=true;
+    if(footer)footer.style.display='';
+    setupModal.classList.add('is-open');
+    setupModal.setAttribute('aria-hidden','false');
+    document.body.classList.add('setup-lock');
+  }
+
+  function packagesAction(label='Paketleri Gör'){
+    return {label,onClick:()=>document.querySelector('#packages')?.scrollIntoView({behavior:'smooth',block:'start'})};
+  }
+
+  function answer(raw){
+    const q=normalize(raw);
+
+    if(!q){
+      addBot('Sorunuzu yazabilirsiniz. Paket fiyatları, kurulum, cihaz uyumluluğu, ücretsiz deneme ve müşteri paneli hakkında yardımcı olabilirim.');
+      return;
+    }
+
+    if(q.includes('yurt dis') || q.includes('euro') || q.includes('40 €') || q.includes('60 €') || q.includes('90 €')){
+      addBot(
+        'Yurt Dışı Premium paketlerimiz:\n• 3 Ay: 40 €\n• 6 Ay: 60 €\n• 12 Ay: 90 €\n\nTüm paketlerde cihaz uyumluluğu, kurulum desteği ve kullanıcı kontrol paneli bulunur.',
+        [packagesAction('Yurt Dışı Paketlerini Gör'),{label:'WhatsApp',href:'https://wa.me/31647410309?text=Merhaba%2C%20Yurt%20D%C4%B1%C5%9F%C4%B1%20paketleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',external:true}]
+      );
+      return;
+    }
+
+    if(q.includes('fiyat') || q.includes('paket') || q.includes('turkiye') || q.includes('tl') || q.includes('kac para') || q.includes('ne kadar')){
+      addBot(
+        'Türkiye paketlerimiz:\n• 1 Ay: 599 ₺\n• 3 Ay: 899 ₺\n• 6 Ay: 1.199 ₺\n• 12 Ay: 1.899 ₺\n\n12 aylık paket uzun dönem kullanım için öne çıkan seçeneğimizdir.',
+        [packagesAction(),{label:'Yurt Dışı Fiyatları',onClick:()=>answer('yurt dışı paketleri')}]
+      );
+      return;
+    }
+
+    if(q.includes('kurulum') || q.includes('kur') || q.includes('smart tv') || q.includes('android tv') || q.includes('tv box') || q.includes('iphone') || q.includes('ipad') || q.includes('windows') || q.includes('mac')){
+      addBot(
+        'Kurulum cihazınıza göre değişir. Smart TV, Android TV / TV Box, Android telefon-tablet, iPhone-iPad ve Windows/Mac için kurulum desteği sunuyoruz.\n\nMüşteri temsilcimizin önerdiği uygulamayı kurduktan sonra size verilen giriş bilgilerini ekleyerek kullanıma başlayabilirsiniz.',
+        [{label:'Kurulum Bilgilerini Aç',onClick:openSetup},{label:'Kurulum Desteği',href:'https://wa.me/31647410309?text=Merhaba%2C%20kurulum%20deste%C4%9Fi%20almak%20istiyorum.',external:true}]
+      );
+      return;
+    }
+
+    if(q.includes('ucretsiz') || q.includes('deneme') || q.includes('test')){
+      addBot(
+        'Şu anda ücretsiz deneme yayını geçici olarak kullanılamamaktadır. Daha sonra tekrar deneyebilir veya paketler hakkında bilgi almak için bizimle iletişime geçebilirsiniz.',
+        [packagesAction(),{label:'İletişime Geç',href:'https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',external:true}]
+      );
+      return;
+    }
+
+    if(q.includes('panel') || q.includes('musteri panel') || q.includes('kontrol panel')){
+      addBot(
+        'Kullanıcı Kontrol Paneli üzerinden paket ve kullanım bilgilerinize erişebilirsiniz.',
+        [{label:'Müşteri Panelini Aç',href:'https://musteripaneli.xyz/index.php?page=login',external:true}]
+      );
+      return;
+    }
+
+    if(q.includes('cihaz') || q.includes('telefon') || q.includes('tablet') || q.includes('bilgisayar') || q.includes('uyum')){
+      addBot(
+        'PRİME TV; Smart TV, Android TV / TV Box, Android telefon-tablet, iPhone-iPad ve Windows/Mac cihazlarla kullanım için uygundur. Kurulum yöntemi cihaz türüne göre değişebilir.',
+        [{label:'Kurulum Bilgisi',onClick:openSetup}]
+      );
+      return;
+    }
+
+    if(q.includes('film') || q.includes('dizi') || q.includes('icerik') || q.includes('spor') || q.includes('canli tv') || q.includes('mac')){
+      addBot(
+        'Paketlerimizde canlı TV, spor, film ve dizi içeriklerine erişim seçenekleri bulunur. Sitedeki film ve dizi afişlerine tıklayarak içerik özeti, tür, yıl, süre/sezon bilgisi ve IMDb puanını görebilirsiniz.',
+        [packagesAction('Paketleri İncele')]
+      );
+      return;
+    }
+
+    if(q.includes('whatsapp') || q.includes('iletisim') || q.includes('destek') || q.includes('yardim')){
+      addBot(
+        'Destek için WhatsApp üzerinden bizimle iletişime geçebilirsiniz.',
+        [{label:'WhatsApp Desteği',href:'https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',external:true}]
+      );
+      return;
+    }
+
+    if(q.includes('merhaba') || q.includes('selam') || q.includes('slm')){
+      addBot('Merhaba 👋 Size paketler, fiyatlar, kurulum, cihaz uyumluluğu veya müşteri paneli hakkında yardımcı olabilirim.');
+      return;
+    }
+
+    addBot(
+      'Bu konuda hazır bilgi bulamadım. Paketler, fiyatlar, kurulum, cihaz uyumluluğu, ücretsiz deneme veya müşteri paneli hakkında sorabilirsiniz. İsterseniz destek ekibimize de ulaşabilirsiniz.',
+      [{label:'WhatsApp Desteği',href:'https://wa.me/31647410309?text=Merhaba%2C%20PR%C4%B0ME%20TV%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.',external:true}]
+    );
+  }
+
+  function openBot(){
+    bot.classList.add('is-open');
+    bot.setAttribute('aria-hidden','false');
+    if(!welcomed){
+      welcomed=true;
+      addBot(
+        'Merhaba 👋 Ben PRİME TV Asistanı.\nPaket fiyatları, kurulum, cihaz uyumluluğu, ücretsiz deneme ve müşteri paneli hakkında hızlıca yardımcı olabilirim.'
+      );
+    }
+    setTimeout(()=>input.focus(),80);
+  }
+
+  function closeBot(){
+    bot.classList.remove('is-open');
+    bot.setAttribute('aria-hidden','true');
+  }
+
+  launch.addEventListener('click',()=>bot.classList.contains('is-open')?closeBot():openBot());
+  close.addEventListener('click',closeBot);
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const text=input.value.trim();
+    if(!text)return;
+    addUser(text);
+    input.value='';
+    setTimeout(()=>answer(text),180);
+  });
+
+  document.querySelectorAll('[data-bot-question]').forEach(btn=>{
+    btn.addEventListener('click',function(){
+      const text=btn.dataset.botQuestion;
+      addUser(text);
+      setTimeout(()=>answer(text),150);
+    });
+  });
+});
+</script>
+
 </body>
 </html>
