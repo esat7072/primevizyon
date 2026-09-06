@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded',function(){
     return {label,onClick:()=>document.querySelector('#packages')?.scrollIntoView({behavior:'smooth',block:'start'})};
   }
 
-  const whatsapp=(text='Merhaba, PRİME TV hakkında bilgi almak istiyorum.')=>({
+  const whatsapp=(text='Merhaba, PRIME VİZYON hakkında bilgi almak istiyorum.')=>({
     label:'WhatsApp Desteği',
     href:'https://wa.me/31647410309?text='+encodeURIComponent(text),
     external:true
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded',function(){
         if(q.includes('nasil') || q.includes('iyi misin') || q.includes('naber') || q.includes('ne haber')){
           addBot('İyiyim, teşekkür ederim 😊 Buradayım ve yardımcı olmaya hazırım. Siz nasılsınız? Paketler, kurulum veya içerikler hakkında istediğinizi sorabilirsiniz.');
         }else{
-          addBot('Merhaba 👋 PRİME TV Asistanına hoş geldiniz. Paketler, fiyatlar, kurulum, cihaz uyumluluğu, kanal kategorileri ve destek hakkında yardımcı olabilirim.');
+          addBot('Merhaba 👋 PRIME VİZYON Asistanına hoş geldiniz. Paketler, fiyatlar, kurulum, cihaz uyumluluğu, kanal kategorileri ve destek hakkında yardımcı olabilirim.');
         }
         return;
 
@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded',function(){
         return;
 
       case 'identity':
-        addBot('Ben PRİME TV web sitesinin otomatik destek asistanıyım. Paketler, kurulum, cihaz uyumluluğu, içerik kategorileri, müşteri paneli ve destek konularında hızlı bilgi verebilirim. Gerçek bir yapay zekâ değilim; site sahibi tarafından tanımlanan bilgilerle çalışıyorum.');
+        addBot('Ben PRIME VİZYON web sitesinin otomatik destek asistanıyım. Paketler, kurulum, cihaz uyumluluğu, içerik kategorileri, müşteri paneli ve destek konularında hızlı bilgi verebilirim. Gerçek bir yapay zekâ değilim; site sahibi tarafından tanımlanan bilgilerle çalışıyorum.');
         return;
 
       case 'tr_prices':
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded',function(){
         return;
 
       case 'devices':
-        addBot('PRİME TV; Smart TV, Android TV / TV Box, Android telefon-tablet, iPhone-iPad ve Windows/Mac cihazlarla kullanım için uygundur. Kurulum yöntemi cihaz türüne göre değişebilir.',
+        addBot('PRIME VİZYON; Smart TV, Android TV / TV Box, Android telefon-tablet, iPhone-iPad ve Windows/Mac cihazlarla kullanım için uygundur. Kurulum yöntemi cihaz türüne göre değişebilir.',
           [{label:'Kurulum Bilgilerini Aç',onClick:openSetup}]);
         return;
 
@@ -550,9 +550,9 @@ document.addEventListener('DOMContentLoaded',function(){
         }else if(q.includes('takim')){
           addBot('Ben takım tutmuyorum 😊 Tarafsız kalıp size site ve paketler konusunda yardımcı oluyorum.');
         }else if(q.includes('kac yas')){
-          addBot('Benim yaşım yok 😊 Ben PRİME TV sitesinde çalışan otomatik destek asistanıyım.');
+          addBot('Benim yaşım yok 😊 Ben PRIME VİZYON sitesinde çalışan otomatik destek asistanıyım.');
         }else{
-          addBot('Ben buradayım 😄 Sohbet edebiliriz ama en iyi olduğum konu PRİME TV paketleri, kurulum ve destek bilgileri.');
+          addBot('Ben buradayım 😄 Sohbet edebiliriz ama en iyi olduğum konu PRIME VİZYON paketleri, kurulum ve destek bilgileri.');
         }
         return;
 
@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded',function(){
     bot.setAttribute('aria-hidden','false');
     if(!welcomed){
       welcomed=true;
-      addBot('Merhaba 👋 Ben PRİME TV Asistanı. Günlük sohbet dahil olmak üzere paketler, fiyatlar, kurulum, cihazlar, kanallar, film-dizi, spor ve destek hakkında soru sorabilirsiniz.');
+      addBot('Merhaba 👋 Ben PRIME VİZYON Asistanı. Günlük sohbet dahil olmak üzere paketler, fiyatlar, kurulum, cihazlar, kanallar, film-dizi, spor ve destek hakkında soru sorabilirsiniz.');
     }
     setTimeout(()=>input.focus(),80);
   }

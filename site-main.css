@@ -1655,3 +1655,115 @@ footer{
 @keyframes v68Base{0%,100%{transform:scaleX(.97);opacity:.55}50%{transform:scaleX(1.04);opacity:.78}}
 @media (prefers-reduced-motion:reduce){.logo-stage:before,.logo-stage:after,.hero-logo-v68 img{animation:none!important}}
 @media(max-width:680px){.logo-stage{height:294px!important}.hero-logo-v68{width:260px;height:260px}.logo-stage:before{width:288px!important;height:288px!important}.logo-stage:after{width:178px!important;height:18px!important;bottom:3px!important}}
+
+
+/* =========================================================
+   PRIME VİZYON V74 — YENİ LOGOYA UYUMLU GOLD / BLACK ARAYÜZ
+   Yalnızca görsel arayüz katmanıdır; içerik/paket bilgileri korunur.
+   ========================================================= */
+:root{
+  --pv-gold:#f3c55b;
+  --pv-gold2:#b97a16;
+  --pv-cream:#fff2c8;
+  --pv-black:#030303;
+  --pv-panel:#090806;
+  --pv-line:rgba(243,197,91,.26);
+}
+html,body{background:#030303!important}
+body{
+  background:
+    radial-gradient(circle at 50% 0,rgba(243,197,91,.055),transparent 28%),
+    #030303!important;
+}
+.header{
+  background:linear-gradient(180deg,rgba(3,3,3,.97),rgba(3,3,3,.88))!important;
+  border-bottom:1px solid rgba(243,197,91,.25)!important;
+  box-shadow:0 8px 32px rgba(0,0,0,.46),0 1px 0 rgba(255,218,120,.04)!important;
+}
+.brand{gap:12px!important;letter-spacing:.3px}
+.brand img{
+  width:58px!important;height:58px!important;border-radius:50%!important;
+  filter:drop-shadow(0 0 7px rgba(243,197,91,.46))!important;
+}
+.brand span{font-weight:950!important;color:#f4d27d!important}
+.brand b{color:#fff3cf!important}
+.navlinks a{color:#e2d4ae!important}
+.navlinks a:hover{color:#ffd978!important;text-shadow:0 0 14px rgba(243,197,91,.36)}
+.btn{
+  border-radius:12px!important;
+  letter-spacing:.2px;
+}
+.btn-gold{
+  background:linear-gradient(135deg,#fff0ad 0%,#f2c252 34%,#a96c12 100%)!important;
+  color:#0b0802!important;
+  border:1px solid rgba(255,231,151,.7)!important;
+  box-shadow:0 8px 26px rgba(214,151,32,.22),inset 0 1px rgba(255,255,255,.55)!important;
+}
+.btn-outline{
+  background:linear-gradient(180deg,rgba(20,16,8,.84),rgba(6,6,5,.9))!important;
+  border:1px solid rgba(243,197,91,.48)!important;color:#f7d77d!important;
+}
+.btn-purple{
+  background:linear-gradient(135deg,rgba(243,197,91,.22),rgba(115,73,10,.28))!important;
+  border:1px solid rgba(243,197,91,.58)!important;color:#ffe8a5!important;
+  box-shadow:0 8px 26px rgba(214,151,32,.12)!important;
+}
+.hero{
+  background:
+    radial-gradient(circle at 50% 46%,rgba(243,197,91,.16),transparent 24%),
+    radial-gradient(circle at 78% 40%,rgba(181,116,17,.08),transparent 27%),
+    linear-gradient(180deg,#030303 0%,#080704 48%,#030303 100%)!important;
+}
+.hero:before{
+  background:
+    linear-gradient(115deg,transparent 0 37%,rgba(243,197,91,.025) 49%,transparent 61%),
+    repeating-linear-gradient(120deg,transparent 0 170px,rgba(243,197,91,.018) 171px 172px,transparent 173px 340px)!important;
+}
+.eyebrow{color:#e7b84d!important}
+.hero h1 span{color:#f3c55b!important;text-shadow:0 0 26px rgba(243,197,91,.16)}
+.hero-copy p{color:#d2cec2!important}
+.pill{border-color:rgba(243,197,91,.5)!important;color:#f6d47e!important;background:#090704!important}
+.pill.purple{border-color:rgba(243,197,91,.5)!important;color:#f6d47e!important}
+.logo-stage{height:410px!important}
+.logo-stage:before{
+  width:390px!important;height:390px!important;
+  background:radial-gradient(circle,rgba(243,197,91,.20) 0 28%,rgba(185,122,22,.10) 46%,transparent 72%)!important;
+  filter:blur(26px)!important;
+}
+.logo-stage:after{
+  width:245px!important;
+  background:radial-gradient(ellipse at center,rgba(255,214,104,.38),rgba(185,122,22,.15) 48%,transparent 76%)!important;
+  border-color:rgba(243,197,91,.42)!important;
+  box-shadow:0 0 16px rgba(243,197,91,.42),0 0 36px rgba(185,122,22,.18)!important;
+}
+.hero-logo-v68{width:390px!important;height:390px!important}
+.hero-logo-v68 img{
+  border-radius:50%!important;
+  filter:drop-shadow(0 0 8px rgba(255,211,98,.30)) drop-shadow(0 0 28px rgba(185,122,22,.24))!important;
+}
+.card,.feature,.price-card,.package-card{
+  border-color:rgba(243,197,91,.20)!important;
+  background:linear-gradient(145deg,rgba(15,13,8,.97),rgba(5,5,4,.98))!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.32),inset 0 1px rgba(255,225,139,.025)!important;
+}
+.section-title small,.feature h3{color:#e9bb52!important}
+.section-title h2{color:#fff8e7!important}
+.poster-card{border-color:rgba(243,197,91,.18)!important}
+.poster-card:hover{border-color:rgba(243,197,91,.56)!important;box-shadow:0 14px 34px rgba(185,122,22,.18)!important}
+.strip{
+  border-color:rgba(243,197,91,.24)!important;
+  background:linear-gradient(90deg,rgba(185,122,22,.06),rgba(243,197,91,.10),rgba(185,122,22,.06))!important;
+  color:#e8d39d!important;
+}
+.package-toggle-btn.active{
+  border-color:rgba(243,197,91,.7)!important;
+  background:linear-gradient(135deg,rgba(243,197,91,.20),rgba(121,77,10,.20))!important;
+  color:#ffe39a!important;
+}
+a:focus-visible,button:focus-visible{outline-color:#f3c55b!important}
+footer{border-top-color:rgba(243,197,91,.18)!important}
+@media(max-width:900px){
+  .brand img{width:50px!important;height:50px!important}
+  .hero-logo-v68{width:min(330px,84vw)!important;height:min(330px,84vw)!important}
+  .logo-stage{height:350px!important}
+}
