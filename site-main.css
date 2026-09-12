@@ -3887,3 +3887,89 @@ body.v83-premium .v17-panel-card span{
     grid-template-columns:1fr!important;
   }
 }
+
+
+/* V87 — PRIME VİZYON Asistanı kaldırıldı */
+.primebot,
+.primebot-launch{
+  display:none!important;
+}
+
+
+/* =========================================================
+   V88 — Paket kartı onay tikleri: tam hizalama düzeltmesi
+   ========================================================= */
+body.v83-premium [data-package-panel] .v15-card ul{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:0!important;
+  padding:0!important;
+  margin:16px 0 20px!important;
+}
+
+body.v83-premium [data-package-panel] .v15-card li{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  min-height:38px!important;
+  margin:0!important;
+  padding:9px 4px 9px 32px!important;
+  color:#c8c2b8!important;
+  font-size:11px!important;
+  line-height:1.45!important;
+  border-bottom:1px dashed rgba(255,255,255,.06)!important;
+  box-sizing:border-box!important;
+}
+
+body.v83-premium [data-package-panel] .v15-card li:last-child{
+  border-bottom:0!important;
+}
+
+body.v83-premium [data-package-panel] .v15-card li::before{
+  content:"✓"!important;
+  position:absolute!important;
+  left:2px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:18px!important;
+  height:18px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 18px!important;
+  border-radius:50%!important;
+  background:#e8b43a!important;
+  color:#090b0d!important;
+  font-size:9px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  font-family:Arial,sans-serif!important;
+  box-shadow:0 0 0 1px rgba(255,221,126,.10),0 4px 12px rgba(232,180,58,.10)!important;
+}
+
+/* Eski ilk-harf renklendirmesini etkisiz hale getir */
+body.v83-premium [data-package-panel] .v15-card li::first-letter{
+  color:inherit!important;
+}
+
+/* Mobilde aynı hizalama korunur */
+@media(max-width:700px){
+  body.v83-premium [data-package-panel] .v15-card ul{
+    margin:15px 0 18px!important;
+  }
+
+  body.v83-premium [data-package-panel] .v15-card li{
+    min-height:40px!important;
+    padding:9px 2px 9px 32px!important;
+    font-size:12px!important;
+    line-height:1.45!important;
+  }
+
+  body.v83-premium [data-package-panel] .v15-card li::before{
+    left:2px!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    width:18px!important;
+    height:18px!important;
+  }
+}
