@@ -1946,3 +1946,34 @@ footer{border-top-color:rgba(243,197,91,.18)!important}
 @media(max-width:700px){
   .pv-platforms-desktop{display:none!important}
 }
+
+
+/* V81 — Mobilde masaüstü logo kartlarının birebir ölçü/oran dili */
+@media(max-width:700px){
+  .pv-platforms{
+    min-height:126px!important;
+  }
+  .pv-platforms-mobile{
+    padding:14px 0!important;
+  }
+  .pv-platforms-track{
+    gap:10px!important;
+    padding-left:10px!important;
+  }
+  .pv-platforms-track .pv-platform-logo{
+    flex:0 0 150px!important;
+    width:150px!important;
+    height:92px!important;
+    padding:8px!important;
+    border-radius:14px!important;
+  }
+  .pv-platforms-track .pv-platform-logo img{
+    width:100%!important;
+    height:100%!important;
+    max-width:138px!important;
+    max-height:68px!important;
+    object-fit:contain!important;
+    opacity:1!important;
+    filter:none!important;
+  }
+}
