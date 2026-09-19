@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function(){
  const m=document.getElementById('trialModal');
  const open=()=>{m.classList.add('is-open');m.setAttribute('aria-hidden','false');document.body.classList.add('trial-modal-lock')};
  const close=()=>{m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.classList.remove('trial-modal-lock')};
- document.querySelectorAll('[data-trial-popup="open"]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();open()}));
+ 
  m.querySelectorAll('[data-trial-popup="close"]').forEach(el=>el.addEventListener('click',close));
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 });

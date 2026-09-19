@@ -3973,3 +3973,99 @@ body.v83-premium [data-package-panel] .v15-card li::first-letter{
     height:18px!important;
   }
 }
+
+/* V89 — Ücretsiz Deneme doğrudan WhatsApp */
+.trial-modal{display:none!important;}
+
+
+/* V90 — Ücretsiz Deneme: aktif WhatsApp + gold görünüm */
+body.v83-premium .trial-gold-v90,
+body.v83-premium a.trial-gold-v90,
+body.v83-premium .trial-nav.trial-gold-v90{
+  background:linear-gradient(135deg,#f5d06f 0%,#d9a82e 48%,#b67a12 100%)!important;
+  color:#080808!important;
+  border:1px solid #f4d77f!important;
+  box-shadow:0 8px 26px rgba(218,168,46,.24), inset 0 1px 0 rgba(255,255,255,.28)!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+}
+body.v83-premium .trial-gold-v90:hover,
+body.v83-premium a.trial-gold-v90:hover{
+  background:linear-gradient(135deg,#ffe08a 0%,#e6b63d 48%,#c68a18 100%)!important;
+  color:#050505!important;
+  border-color:#ffe69a!important;
+}
+
+
+/* ============================================================
+   V91 — Tüm ana aksiyon butonları premium GOLD
+   ============================================================ */
+body.v83-premium .btn,
+body.v83-premium a.btn,
+body.v83-premium button.btn,
+body.v83-premium .v15-card > a,
+body.v83-premium .v17-panel-btn,
+body.v83-premium .guide-card .btn,
+body.v83-premium .cta-actions .btn,
+body.v83-premium .card.why-logo .btn,
+body.v83-premium #how .center-action .btn,
+body.v83-premium .package-toggle-btn,
+body.v83-premium .trial-gold-v90{
+  background:linear-gradient(135deg,#f7d778 0%,#dcae38 48%,#b97d13 100%)!important;
+  color:#080808!important;
+  border:1px solid #f5d982!important;
+  box-shadow:
+    0 8px 24px rgba(218,168,46,.20),
+    inset 0 1px 0 rgba(255,255,255,.30)!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+}
+
+/* Paket bölgesi sekmelerinde pasif/aktif ayrımı gold tonlarıyla */
+body.v83-premium .package-toggle-btn:not(.active){
+  background:linear-gradient(135deg,rgba(214,165,50,.16),rgba(154,103,13,.12))!important;
+  color:#e9c765!important;
+  border:1px solid rgba(231,187,78,.38)!important;
+  box-shadow:none!important;
+}
+body.v83-premium .package-toggle-btn.active{
+  background:linear-gradient(135deg,#f7d778 0%,#dcae38 48%,#b97d13 100%)!important;
+  color:#080808!important;
+  border-color:#f5d982!important;
+}
+
+/* Hover */
+@media (hover:hover){
+  body.v83-premium .btn:hover,
+  body.v83-premium a.btn:hover,
+  body.v83-premium button.btn:hover,
+  body.v83-premium .v15-card > a:hover,
+  body.v83-premium .v17-panel-btn:hover,
+  body.v83-premium .guide-card .btn:hover,
+  body.v83-premium .cta-actions .btn:hover,
+  body.v83-premium .card.why-logo .btn:hover,
+  body.v83-premium #how .center-action .btn:hover,
+  body.v83-premium .trial-gold-v90:hover{
+    background:linear-gradient(135deg,#ffe496 0%,#e8ba47 48%,#c88d1a 100%)!important;
+    color:#050505!important;
+    border-color:#ffe79d!important;
+    box-shadow:
+      0 10px 30px rgba(222,172,48,.30),
+      inset 0 1px 0 rgba(255,255,255,.36)!important;
+  }
+}
+
+/* Mobilde gold görünümü aynen koru */
+@media(max-width:700px){
+  body.v83-premium .btn,
+  body.v83-premium a.btn,
+  body.v83-premium button.btn,
+  body.v83-premium .v15-card > a,
+  body.v83-premium .v17-panel-btn,
+  body.v83-premium .cta-actions .btn,
+  body.v83-premium .card.why-logo .btn,
+  body.v83-premium #how .center-action .btn,
+  body.v83-premium .trial-gold-v90{
+    color:#080808!important;
+  }
+}
