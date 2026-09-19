@@ -4441,3 +4441,27 @@ body.v83-premium .package-toggle-btn.active{
     -webkit-backdrop-filter:blur(4px)!important;
   }
 }
+
+
+/* V99 — Sadece paket kartı "PAKETİ SEÇ" yazı rengi */
+body.v83-premium [data-package-panel] .v15-card > a,
+body.v83-premium [data-package-panel] .v15-card > a:link,
+body.v83-premium [data-package-panel] .v15-card > a:visited,
+body.v83-premium [data-package-panel] .v15-card > a:hover,
+body.v83-premium [data-package-panel] .v15-card > a:active{
+  color:#000000!important;
+  -webkit-text-fill-color:#000000!important;
+  opacity:1!important;
+}
+
+
+/* V100 — Sadece EN POPÜLER paket kartının "PAKETİ SEÇ" yazısı gold */
+body.v83-premium [data-package-panel] .v15-card.v15-featured > a,
+body.v83-premium [data-package-panel] .v15-card.v15-featured > a:link,
+body.v83-premium [data-package-panel] .v15-card.v15-featured > a:visited,
+body.v83-premium [data-package-panel] .v15-card.v15-featured > a:hover,
+body.v83-premium [data-package-panel] .v15-card.v15-featured > a:active{
+  color:#dcae38!important;
+  -webkit-text-fill-color:#dcae38!important;
+  opacity:1!important;
+}
