@@ -4465,3 +4465,11 @@ body.v83-premium [data-package-panel] .v15-card.v15-featured > a:active{
   -webkit-text-fill-color:#dcae38!important;
   opacity:1!important;
 }
+
+
+/* V102 — Masaüstü ana hero sol içerik hizası */
+@media (min-width: 901px){
+  body.v83-premium .hero-copy{
+    transform:translateX(105px)!important;
+  }
+}

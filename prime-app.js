@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   const whatsapp=(text='Merhaba, PRIME VİZYON hakkında bilgi almak istiyorum.')=>({
     label:'WhatsApp Desteği',
-    href:'https://wa.me/31647410309?text='+encodeURIComponent(text),
+    href:'https://wa.me/447597385943?text='+encodeURIComponent(text),
     external:true
   });
 
