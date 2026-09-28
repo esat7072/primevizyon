@@ -4473,3 +4473,14 @@ body.v83-premium [data-package-panel] .v15-card.v15-featured > a:active{
     transform:translateX(105px)!important;
   }
 }
+
+
+/* V107 SEO intent sections */
+.seo-intent-section{padding:38px 0;border-top:1px solid rgba(240,185,55,.10);background:linear-gradient(180deg,rgba(11,12,17,.25),rgba(8,9,13,.55))}
+.seo-intent-card{max-width:980px;margin:0 auto;padding:24px 26px;border:1px solid rgba(240,185,55,.18);border-radius:18px;background:linear-gradient(145deg,rgba(16,18,25,.96),rgba(9,10,15,.96));box-shadow:0 12px 38px rgba(0,0,0,.20)}
+.seo-intent-card h2{margin:0 0 12px;color:#f3c85d;font-size:clamp(20px,2.2vw,28px)}
+.seo-intent-card p{margin:10px 0;color:#b8bdc7;line-height:1.72;font-size:14px}
+.seo-intent-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.seo-intent-links a{padding:8px 11px;border-radius:10px;border:1px solid rgba(141,76,255,.28);background:rgba(141,76,255,.06);color:#e7dcff;text-decoration:none;font-size:12px;font-weight:800}
+.seo-intent-links a:hover{border-color:rgba(240,185,55,.48);color:#f4cf72}
+@media(max-width:680px){.seo-intent-section{padding:28px 0}.seo-intent-card{padding:19px 18px;border-radius:15px}.seo-intent-card p{font-size:13px}}
