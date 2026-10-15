@@ -4484,3 +4484,17 @@ body.v83-premium [data-package-panel] .v15-card.v15-featured > a:active{
 .seo-intent-links a{padding:8px 11px;border-radius:10px;border:1px solid rgba(141,76,255,.28);background:rgba(141,76,255,.06);color:#e7dcff;text-decoration:none;font-size:12px;font-weight:800}
 .seo-intent-links a:hover{border-color:rgba(240,185,55,.48);color:#f4cf72}
 @media(max-width:680px){.seo-intent-section{padding:28px 0}.seo-intent-card{padding:19px 18px;border-radius:15px}.seo-intent-card p{font-size:13px}}
+
+/* V108 desktop foreign pricing: four equal columns, no forced third-card span */
+@media (min-width:1101px){
+  [data-package-panel="foreign"] .v15-grid-foreign{
+    display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    width:100%!important;max-width:none!important;gap:16px!important;
+    margin-left:auto!important;margin-right:auto!important;
+  }
+  [data-package-panel="foreign"] .v15-grid-foreign>.v15-card{
+    grid-column:auto!important;grid-row:auto!important;
+    min-width:0!important;width:100%!important;max-width:none!important;
+    justify-self:stretch!important;
+  }
+}
